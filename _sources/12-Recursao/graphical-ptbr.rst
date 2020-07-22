@@ -32,7 +32,7 @@ O caso básico dessa função é quando o comprimento da linha que desejamos des
 O passo recursivo é quando chamamos drawSpiral novamente com um comprimento reduzido. No fim do :ref:`programa 1 <lst_turt1>` você vai notar que chamamos a função ``myWin.exitonclick()``. Este é um método bem prático da
 janela que coloca a tartaruga em modo de espera até que você clique no interior da janela, depois do qual o programa realiza a limpeza e termina.
 
-.. _lst_turt1:
+.. lst_turt1:
 
 .. activecode:: lst_turt1
 
@@ -83,7 +83,7 @@ A janela activecode abaixo mostra um programa completo para este exemplo de árv
 ser desenhada de forma simétrica com as metades direita e esquerda da árvore
 sendo moldadas simultaneamente? Ou será que lado direito vai ser desenhado primeiro e depois o lado esquerdo?
 
-.. _lst_complete_tree:
+.. lst_complete_tree:
 
 .. activecode:: lst_complete_tree
 
@@ -179,7 +179,7 @@ Como podemos continuar aplicando o algoritmo indefinidamente, qual o caso básic
 chegarmos a um grau de 0, paramos de fazer chamadas recursivas. O código que
 gerou o triângulo de Sierpinski na :ref:`figura 3 <fig_sierpinski>` é mostrado no :ref:`programa 4 <lst_st>`.
 
-.. _lst_st:
+.. lst_st:
 
 .. activecode:: lst_st
 

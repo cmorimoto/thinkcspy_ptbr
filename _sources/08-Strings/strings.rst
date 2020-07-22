@@ -187,7 +187,9 @@ feita primeiro, você vai precisar usar parênteses.
    s = "python"
    t = "rocks"
    print(s+t)
+
    </pre>
+
 
 .. mchoice:: test_question8_1_2
    :answer_a: python!!!
@@ -205,6 +207,7 @@ feita primeiro, você vai precisar usar parênteses.
    s = "python"
    excl = "!"
    print(s+excl*3)
+
    </pre>
 
 
@@ -300,6 +303,7 @@ Observe que a indexação retorna um *string* --- o Python não tem nenhum tipo 
    <pre>
    s = "python rocks"
    print(s[3])
+
    </pre>
 
 
@@ -319,7 +323,9 @@ Observe que a indexação retorna um *string* --- o Python não tem nenhum tipo 
    <pre>
    s = "python rocks"
    print(s[2] + s[-5])
+
    </pre>
+
 
 
 .. String Methods
@@ -479,7 +485,9 @@ Você deve experimentar esses métodos para que você entenda o que eles fazem. 
    <pre>
    s = "python rocks"
    print(s.count("o") + s.count("p"))
+
    </pre>
+
 
 
 .. mchoice:: test_question8_3_2
@@ -498,7 +506,9 @@ Você deve experimentar esses métodos para que você entenda o que eles fazem. 
    <pre>
    s = "python rocks"
    print(s[1]*s.index("n"))
+
    </pre>
+
 
 .. index::
     single: função len
@@ -582,7 +592,9 @@ combinando as duas linhas de código acima.
    <pre>
    s = "python rocks"
    print(len(s))
+
    </pre>
+
 
 
 .. mchoice:: test_question8_4_2
@@ -601,7 +613,9 @@ combinando as duas linhas de código acima.
    <pre>
    s = "python rocks"
    print(s[len(s)-5])
+
    </pre>
+
 
 
 .. The Slice Operator
@@ -664,7 +678,9 @@ O que você acha que ``fruta[:]`` significa?
    <pre>
    s = "python rocks"
    print(s[3:8])
+
    </pre>
+
 
 
 .. mchoice:: test_question8_5_2
@@ -682,7 +698,9 @@ O que você acha que ``fruta[:]`` significa?
    <pre>
    s = "python rocks"
    print(s[7:11]*3)
+
    </pre>
+
 
    
 .. l index  string comparison, comparison of strings
@@ -829,7 +847,9 @@ o veja, ele é um caractere real.
    Qual o resultado da seguinte comparação:
    <pre>
    "mel" < "melhor"
+
    </pre>
+
    
    
 .. mchoice:: test_question8_6_2
@@ -844,7 +864,9 @@ o veja, ele é um caractere real.
    Qual o resultado da seguinte comparação:
    <pre>
    "mel" < "Mel"
+
    </pre>
+
    
 
 .. mchoice:: test_question8_6_3
@@ -857,7 +879,9 @@ o veja, ele é um caractere real.
    Qual o resultado da seguinte comparação:
    <pre>
    "mel" < "Melhor"
+
    </pre>
+
    
 
 .. mutable, immutable, runtime error
@@ -895,7 +919,7 @@ Strings são **imutáveis**, o que significa que você não pode mudar um string
     print(nova_conversa)
     print(conversa)            # mesmo que antes
 
-.. The solution here is to concatenate a new first letter onto a slice of ``greeting``. This operation has no effect on the original string.
+.. The solution here is to concatenate a new first letter onto a slice of ``greeting``. This operation `has no effect on the original string.
 
 A solução aqui é concatenar uma nova primeira letra com uma fatia de ``conversa``. Esta operação não tem efeito sobre o string original.
 
@@ -915,7 +939,9 @@ A solução aqui é concatenar uma nova primeira letra com uma fatia de ``conver
    s = "Ball"
    s[0] = "C"
    print(s)
+
    </pre>
+
 
 
 .. traversal, for loop, concatenation, abecedarian series
@@ -1009,15 +1035,15 @@ direita.
    :feedback_c: Sim, há 13 caracteres, incluindo os espaços.
    :feedback_d: O comando for pode iterar sobre uma sequência item por item.
 
-
    Quantas vezes a palavra OLA é impressa pelos seguintes comandos?
    <pre>
    s = "viva o python"
    for ch in s:
       print("OLA")
+
    </pre>
-   
-   
+
+
    
 .. mchoice:: test_question8_8_2
    :answer_a: 4
@@ -1030,13 +1056,14 @@ direita.
    :feedback_c: Verifique o resultado de s[3:8]. Ele não inclui o item de índice 8.
    :feedback_d: A fatia s[3:8] retorna uma sequência.
 
-
    Quantas vezes a palavra OLA é impressa pelos seguintes comandos?
    <pre>
    s = "viva o python"
    for ch in s[3:8]:
       print("OLA")
+
    </pre>
+
 
 .. Traversal and the ``for`` Loop: By Index
    
@@ -1107,15 +1134,15 @@ Simule os valores de ``idx`` e verifique que eles estão corretos. Em particular
    :feedback_c: Sim, todos os caracteres nas posições pares serão impressos.
    :feedback_d: O comando for pode conter qualquer outro comando, incluindo if e outros comandos for. 
 
-
    Quantas vezes a letra o é impressa pelos seguintes comandos?
    <pre>
    s = "python rocks"
    for idx in range(len(s)):
       if idx % 2 == 0:
          print(s[idx])
-   
+
    </pre>
+
 
 
 .. Traversal and the ``while`` Loop
@@ -1184,7 +1211,6 @@ valores das variáveis.
    :feedback_b: a letra o está nas posições 4 e 8, e o idx começa em 1, não 0.
    :feedback_c: Há duas letras o mas idx não recebe os valores de índice corretos.
 
-
    Quantas vezes a letra o é impressa pelos seguintes comandos?
    <pre>
    s = "python rocks"
@@ -1192,8 +1218,9 @@ valores das variáveis.
    while idx < len(s):
       print(s[idx])
       idx = idx + 2
-   
+
    </pre>
+
 
 .. index::
     single: operador in
@@ -1345,6 +1372,7 @@ acumuladora crescer.
        
     print(removeVowels("compsci"))
 
+
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_11_1
@@ -1363,7 +1391,9 @@ acumuladora crescer.
    for item in s:
       r = item.upper() + r
    print(r)
+
    </pre>
+
 
 .. Turtles and Strings and L-Systems
    

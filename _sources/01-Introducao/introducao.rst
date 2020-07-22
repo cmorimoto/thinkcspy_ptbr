@@ -658,7 +658,7 @@ Isso é um exemplo da **função print**, que na realidade não "imprime"
 nada em papel. Ela apresenta um valor na tela. Neste caso, o resultado
 é o texto:
 
-.. sourcecode:: python
+.. sourcecode:: 
     
     Ola Mundo!
 

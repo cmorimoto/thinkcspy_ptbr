@@ -848,15 +848,12 @@ Glossário
         A superfície dentro de uma janela usada para desenhar.
 	
     condição de parada.
-        Uma condição que, ao ocorrer, faz com que um laço pare de repetir
-	o seu corpo.
+        Uma condição que, ao ocorrer, faz com que um laço pare de repetir o seu corpo.
         Nos laços ``for`` que vimos neste capítulo, a condição de parada
-        se torna verdadeira quando não há mais elementos para atribuir
-	à *variável do laço*.
+        se torna verdadeira quando não há mais elementos para atribuir à *variável do laço*.
 
     corpo do laço
-        Conjunto de comandos contidos dentro de um laço. A identificação
-	do corpo é feita pelo recuo (tab) a partir da declaração do laço.
+        Conjunto de comandos contidos dentro de um laço. A identificação do corpo é feita pelo recuo (tab) a partir da declaração do laço.
 
     estado
         A coleção de valores de atributos mantida por um objeto de dados específico.
@@ -873,51 +870,35 @@ Glossário
         instâncias da classe `Turtle`.
 
     invocar
-        Um objeto tem métodos. Usamos o verbo invocar para significar
-	*ativar o método*. A invocação de um método é feita
-	colocando parênteses após o nome do método, com alguns dos
-	possíveis argumentos. Então ``wn.exitonclick()`` é
+        Um objeto tem métodos. Usamos o verbo invocar para significar *ativar o método*. A invocação de um método é feita colocando parênteses após o nome do método, com alguns dos possíveis argumentos. Então ``wn.exitonclick()`` é
         uma invocação do método ``exitonclick``.
 
     iteração (comando de)
-        Um bloco de construção básico de algoritmos (programas). Ele
-	permite que passos sejam repetidos. Às vezes chamado
-	*laço* (`loop`, ou `looping`). 
+        Um bloco de construção básico de algoritmos (programas). Ele permite que passos sejam repetidos. Às vezes chamado *laço* (`loop`, ou `looping`). 
 
     método
         Uma função de um objeto. Invocando ou ativando o
-        método faz com que o objecto responda de alguma forma,
-	por exemplo, ``forward`` é o método que usamos para
-	uma tartaruga se mova para frente (``tess.forward(100)``.
+        método faz com que o objecto responda de alguma forma, por exemplo, ``forward`` é o método que usamos para uma tartaruga se mova para frente (``tess.forward(100)``.
 
     módulo
         Um arquivo contendo definições e comandos do Python para uso em
-        outros programas em Python. O conteúdo de um módulo é
-	disponibilizado para outro programa usando o comando *import*.
+        outros programas em Python. O conteúdo de um módulo é disponibilizado para outro programa usando o comando *import*.
 
     objeto
-        Uma "coisa" que pode ser referida por uma variável.
-	Essa coisa pode ser uma janela no monitor,
-        ou uma das tartarugas que você criou.
+        Uma "coisa" que pode ser referida por uma variável. Essa coisa pode ser uma janela no monitor, ou uma das tartarugas que você criou.
 	
     range
-        Uma função nativa do Python para gerar sequências de números inteiros.
-	Ela é especialmente útil quando precisamos escrever um laço que é
-	executado um número de vezes determinado.
+        Uma função nativa do Python para gerar sequências de números inteiros. Ela é especialmente útil quando precisamos escrever um laço que é executado um número de vezes determinado.
 	
     sequencial
-        O comportamento padrão de um programa. O processamento passo-a-passo
-	de um algoritmo.
+        O comportamento padrão de um programa. O processamento passo-a-passo de um algoritmo.
 
     variável do laço
         Uma variável usada como parte de um laço. Ela recebe um valor diferente
-        em cada iteração do laço e é usada como parte da *condição de parada*
-	do laço.
+        em cada iteração do laço e é usada como parte da *condição de parada* do laço.
 
     Turtle
-        Classe que define objetos de dados usados para criar imagens
-	(gráficos de tartarugas). "turtle", com minúscula, é o nome do
-	módulo gráfico do Python que contém Turtle.
+        Classe que define objetos de dados usados para criar imagens (gráficos de tartarugas). "turtle", com minúscula, é o nome do módulo gráfico do Python que contém Turtle.
 
 
 

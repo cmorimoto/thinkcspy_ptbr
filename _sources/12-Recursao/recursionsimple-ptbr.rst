@@ -10,7 +10,7 @@
 ..  description:: Esta é uma breve introdução à ideia de recursão
 
 Recursão
---------
+=========
 
 
 Objetivos
@@ -53,7 +53,7 @@ calcular a soma de uma lista de números, tais como:
 acumuladora (``theSum``) para calcular o total de todos os números da
 lista iniciando com :math:`0` e somando cada número da lista.
 
-.. _lst_itsum:
+.. lst_itsum:
 
 .. activecode:: lst_itsum
 
@@ -115,7 +115,7 @@ primeiro elemento.
 Isso pode ser expresso facilmente em Python como no 
 :ref:`Programa 2 <lst_recsum>`.
 
-.. _lst_recsum:
+.. lst_recsum:
 
 .. activecode:: lst_recsum
 
@@ -310,7 +310,7 @@ O :ref:`Programa 3 <lst_rectostr>` mostra o código em Python que
 implementa o algoritmo descrito acima para qualquer base entre 2
 e 16. 
 
-.. _lst_rectostr:
+.. lst_rectostr:
 
 .. activecode:: lst_rectostr
 
@@ -410,7 +410,7 @@ algoritmo para empilhar os strings em uma pilha antes de fazer a
 chamada recursiva. O código para esta algoritmo modificado é mostrado
 no :ref:`Programa 4 <lst_recstack>`.
 
-.. _lst_recstack:
+.. lst_recstack:
 
 .. activecode:: lst_recstack
 

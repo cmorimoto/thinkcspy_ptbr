@@ -7,9 +7,8 @@
     Invariant Sections being Forward, Prefaces, and Contributor List, 
     no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
     is included in the section entitled "GNU Free Documentation License".
-
-    Marco de 2013:
-    Versao 0.0 da traducao para o Portugues do arquivo: source/OldIndexAndConfFiles/index-thinkcs 
+    Março de 2013:
+    Versão 0.0 da traducao para o Portugues do arquivo: source/OldIndexAndConfFiles/index-thinkcs 
 
 .. meta::
    :description: Versão interativa do livro Como Pensar Como um Cientista da Computação. Aprenda a programar em Python usando esse livro online.
@@ -19,7 +18,7 @@
 Como Pensar Como um Cientista da Computação
 ===========================================
 
-.. image:: _static/python-logo.png
+.. image:: ../_static/python-logo.png
    :scale: 75%
    :alt: ThinkCSPy Logo
 
@@ -28,7 +27,7 @@ Aprendendo com Python: Edição interativa (usando Python 3.x)
 
 Tradução do livro “How to Think Like a Computer Scientist: Interactive Version”, de Brad Miller e David Ranum
 
-Tradutores: Carlos H. Morimoto, José Augusto Soares e José Coelho de Pina Jr.
+Tradutores: C. H. Morimoto, J. C. de Pina Jr. e J. A. Soares 
 
 .. por Brad Miller e David Ranum
 
