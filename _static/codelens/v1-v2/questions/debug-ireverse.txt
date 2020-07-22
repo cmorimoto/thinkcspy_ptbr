@@ -1,0 +1,66 @@
+Name:
+Debug: In-place reverse
+
+Question:
+
+The given function reverses a list in-place, but it doesn't work for all
+test inputs.  Change only ONE line of code to make this function pass
+all tests.
+
+MaxLineDelta: 1
+
+Hint:
+Focus on the 'indices' variable.
+
+Solution:
+Change line 3 to "indices = range((maxIndex + 1)/2)"
+
+Skeleton:
+
+def reverse(lst):
+    maxIndex = len(lst) - 1
+    indices = range(maxIndex/2)
+    for i in indices:
+        tmp = lst[i]
+        lst[i] = lst[maxIndex - i]
+        lst[maxIndex - i] = tmp
+
+
+Test:
+input = ['a', 'b', 'c', 'd', 'e']
+reverse(input)
+
+Expect:
+input = ['e', 'd', 'c', 'b', 'a']
+
+
+Test:
+input = ['a', 'b', 'c', 'd']
+reverse(input)
+
+Expect:
+input = ['d', 'c', 'b', 'a']
+
+
+Test:
+input = ['a', 'b', 'c']
+reverse(input)
+
+Expect:
+input = ['c', 'b', 'a']
+
+
+Test:
+input = ['a', 'b']
+reverse(input)
+
+Expect:
+input = ['b', 'a']
+
+
+Test:
+input = ['a']
+reverse(input)
+
+Expect:
+input = ['a']

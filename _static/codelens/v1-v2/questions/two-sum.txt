@@ -1,0 +1,64 @@
+Name:
+Two-sum
+
+Question:
+
+Write a function to return the sum of the two largest elements in the
+given list (assuming you're given a list with at least two elements).
+
+Hint:
+Can you find the largest element?  How about the second largest?  Or
+think about sorting.
+
+Solution:
+Scan through the list twice to find the two largest elements, then sum
+them (or sort and sum the two largest elements).
+
+Skeleton:
+
+def sumTwoLargest(lst):
+    # write your solution code here
+
+Test:
+input = [5,3,4,7,10]
+result = sumTwoLargest(input)
+
+Expect:
+result = 17
+
+Test:
+input = [5,4,3,2,1]
+result = sumTwoLargest(input)
+
+Expect:
+result = 9
+
+Test:
+input = [3,7]
+result = sumTwoLargest(input)
+
+Expect:
+result = 10
+
+Test:
+input = [1,1,1,1,1,1,1,1,1,1]
+result = sumTwoLargest(input)
+
+Expect:
+result = 2
+
+Test:
+input = [1,9,5,7,3]
+result = sumTwoLargest(input)
+
+Expect:
+result = 16
+
+
+Test:
+input = [1,2,5,3,5,4]
+result = sumTwoLargest(input)
+
+Expect:
+result = 10
+

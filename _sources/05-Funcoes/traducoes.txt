@@ -1,0 +1,6 @@
+dead code ; código morto
+unreachable code ; código inatingível
+scaffolding ; plataforma ?
+floating-point value ; valor real ?
+outline ; esboço
+wrapping ; encapsular

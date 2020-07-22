@@ -1,0 +1,18 @@
+
+NORMALIZAR:
+1 - **Check your understanding**  -->> **Teste o seu entendimento**
+2 - activecode -> NAO TRADUZIDO
+3 - codelens   -> TAMBEM NAO
+
+
+Alguma tradućoes adotadas:
+
+byte code      -> código em bytes 
+parse          -> análise
+program mode   -> modo script
+prompt         -> NAO TRADUZIDO
+Python shell   -> terminal Python
+runtime errors -> erros de execução
+script         -> NAO TRADUZIDO
+shell mode     -> modo linha de comando
+tokens         -> NAO TRADUZIDO

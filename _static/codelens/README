@@ -1,0 +1,178 @@
+Online Python Tutor
+
+http://pythontutor.com/
+https://github.com/pgbovine/OnlinePythonTutor/
+
+
+Copyright (C) 2010-2013 Philip J. Guo (philip@pgbovine.net)
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+======
+
+Summary:
+ 
+  Online Python Tutor enables teachers and students to write Python
+  programs directly in the web browser, execute those programs, and then
+  step forwards and backwards through execution to view the run-time
+  state of data structures.
+
+  So far, over 100,000 people have used Online Python Tutor to
+  understand and debug their programs, often as a supplement to
+  textbooks, lecture notes, and online programming tutorials.
+
+---
+All documentation is viewable online at:
+  https://github.com/pgbovine/OnlinePythonTutor/tree/master/v3/docs
+
+---
+Repository contents:
+
+  tl;dr: the v3/ sub-directory contains the latest version of the code.
+
+v1-v2/
+
+  Online Python Tutor version 1 - released on January 19, 2010
+  "Release" email to 15 friends:
+
+  Subject: version 0.0000001alpha of my online Python tutor
+  Body:
+  '''
+  hi python fans (and non-fans) ...
+
+  this is what i've been hacking on for the past few days instead of
+  doing my research ;)  i'm planning to use it as a platform for
+  creating interactive online programming tutorials as part of a
+  volunteer project ...
+
+  http://python.pgrind.com/
+
+  it'd be great to get your feedback on what i have so far.  i'd love
+  to hear suggestions or complaints.  thanks in advance!
+
+  please don't share this link yet, mostly because my app is still
+  buggy and insecure (i definitely don't want random peoples from the
+  internet trying to hack it right now!)
+
+  pg
+  '''
+
+
+  Online Python Tutor version 2 - released on October 4, 2011
+  "Release" email to 13 friends:
+
+  Subject: Re: version 0.0000001alpha of my online Python tutor
+  Body:
+  '''
+  Dear subset of people who cared about my prior email from almost 2
+  years ago ...
+
+  I've recently kicked it up a notch with a "2.0" version and am about
+  to do a public release soon.  I'd really appreciate any feedback,
+  criticism, and especially bug reports on Internet Explorer ;)
+
+  http://people.csail.mit.edu/pgbovine/opt-prerelease/
+
+  Please don't share the link yet since it will be dead soon when I
+  move this app to its permanent home.  I just want to get some early
+  feedback to eliminate the obviously embarrassing bugs before launch.
+
+  THANKS!
+
+  pg
+  '''
+
+
+v3/
+
+  Online Python Tutor version 3 - Released on September 18, 2012
+  to 153,000+ people on Google+:
+    https://plus.google.com/+ResearchatGoogle/posts/cseo9qi7LWq
+
+  "Release" announcement from the Research @ Google G+ account:
+  '''
+  Online Python Tutor: Web-Based Program Visualization for CS Education
+
+  As part of his CS education work at Google, +Philip Guo has been
+  developing an open-source educational tool called Online Python Tutor
+  (http://www.pythontutor.com). This tool enables teachers and students
+  to write Python programs directly in the web browser and then
+  single-step forwards and backwards to visualize what the computer is
+  doing as it executes those programs.
+
+  Program visualization for CS education is nothing new -- researchers
+  have been developing these sorts of tools for decades. However, most
+  of these tools never reach far beyond the confines of the researchers'
+  home universities due to the difficulty of installing and configuring
+  the visualization software. What makes Online Python Tutor unique and
+  effective is that it's the first known tool to adapt time-tested ideas
+  from the research literature (e.g., rendering of box-and-pointer
+  diagrams) for a web-based environment. Now anyone with a modern
+  browser can create, explore, and share their program visualizations by
+  simply visiting a web URL.
+
+  This ease of access has been a major contributor to adoption: So far,
+  over 100,000 people have used Online Python Tutor to understand and
+  debug their programs, often as a supplement to learning from
+  textbooks, lecture notes, and online programming tutorials. In
+  addition, instructors in over a dozen universities such as MIT, UC
+  Berkeley, and the University of Washington have used it for teaching
+  introductory computer science courses.
+
+  But this is just the beginning. Philip and his colleagues are now
+  building an online authoring environment so that, within the next few
+  months, teachers and students will be able to save their code snippets
+  and add annotations, discussion threads, lessons, and interactive
+  exercises on top of the associated visualizations.
+
+  They are also actively seeking partnerships with educators at all
+  grade levels to deploy and improve Online Python Tutor. Please contact
+  Philip directly or re-share this post with educators who might be
+  interested in working with this tool in any capacity.
+
+  Visit www.pythontutor.com to learn more and to start visualizing your
+  Python programs now!
+  '''
+
+---
+Acknowledgments
+
+John DeNero - for helping with the official Python 3 port and lots of code patches
+Chris Horne - https://github.com/lahwran - for security tips
+Peter Wentworth and his students - for working on the original Python 3 fork
+Brad Miller - for adding pop-up question dialogs to visualizations
+
+
+For advice and feedback from an instructor's perspective:
+
+John Dalbey
+Michael Ernst
+David Evans
+Paul Gries
+Adam Hartz
+Tomas Lozano-Perez
+Bertram Ludaescher
+Brad Miller
+Rob Miller
+Peter Norvig
+Andrew Petersen
+David Pritchard
+Suzanne Rivoire
+David Wilkins

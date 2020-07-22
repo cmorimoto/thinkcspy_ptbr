@@ -1,0 +1,48 @@
+{% extends "!layout.html" %}
+{% set customsidebar = "links.html" %}
+{% block doctype %}
+<!DOCTYPE html>
+{% endblock %}
+
+{% block extrahead %}
+<script type="text/javascript"> 
+eBookConfig = {}
+eBookConfig.host = '{{course_url}}' ? '{{course_url}}' : 'http://127.0.0.1:8000',
+eBookConfig.app = eBookConfig.host+'/{{appname}}',
+eBookConfig.ajaxURL = eBookConfig.app+'/ajax/',
+eBookConfig.course = '{{course_id}}',
+eBookConfig.logLevel = {{loglevel}},
+eBookConfig.loginRequired = {{login_required}}
+eBookConfig.isLoggedIn = false;
+</script>
+<script type="text/javascript" charset="utf-8" src="{{course_url}}/{{appname}}/static/js/jquery.idle-timer.js">
+</script>
+
+{% endblock %}
+
+{% block htmlblock %}
+<html  xmlns="http://www.w3.org/1999/xhtml" manifest="/build/_static/cache.manifest">
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(addUserToFooter)
+    $(document).ready(createEditors);
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endblock %}
