@@ -260,78 +260,111 @@ quais parâmetros quisermos.
    Qual dos seguintes é um cabeçalho válido de uma função (a primeira linha da definição da função)?
 
 .. mchoice:: test_question5_1_4
-   :answer_a: def desenhaQuadrado(t, tam)
-   :answer_b: desenhaQuadrado
-   :answer_c: desenhaQuadrado(t, tam)
-   :answer_d: Faça a tartaruga t desenhar um quadrado com lado tam.
-   :correct: b
-   :feedback_a: Esta linha é o cabeçalho completo da função (exceto pelos dois pontos) o que inclui o nome bem como vários outros componentes.
-   :feedback_b: Sim, o mome da função é dado após a palavra reservada def e antes da lista de parâmetros.
-   :feedback_c: Isto inclui o nome da função e seus parâmetros.
-   :feedback_d: Isto é um comentário declarando o que a função faz.
+    :random:
 
-   Qual é o nome da seguinte função?
-   <pre>
-   def desenhaQuadrado(t, tam):
-       """Faca a tartaruga t desenhar um quadrado com lado tam."""
-       for i in range(4):
-           t.forward(tam)
-           t.left(90)
-   </pre>
+    Qual é o nome da seguinte função?
+
+    .. sourcecode:: python
+
+        def desenhaQuadrado(t, tam):
+            """Faca a tartaruga t desenhar um quadrado com lado tam."""
+            for i in range(4):
+                t.forward(tam)
+                t.left(90)
+
+    - def desenhaQuadrado(t, tam)
+
+      - Esta linha é o cabeçalho completo da função (exceto pelos dois pontos) o que inclui o nome bem como vários outros componentes.
+
+    - desenhaQuadrado
+    
+      + Sim, o nome da função é dado após a palavra reservada def e antes da lista de parâmetros.
+    
+    - desenhaQuadrado(t, tam)
+    
+      - Isto inclui o nome da função e seus parâmetros.
+    
+    - Faça a tartaruga t desenhar um quadrado com lado tam.
+
+      - Isto é um comentário declarando o que a função faz.
 
 
 .. mchoice:: test_question5_1_5
-   :answer_a: i
-   :answer_b: t
-   :answer_c: t, tam
-   :answer_d: t, tam, i
-   :correct: c
-   :feedback_a: i é uma variável usada internamente pela função, mas não é um parâmetro passado para a função.
-   :feedback_b: t é somente um dos parâmetros para esta função.
-   :feedback_c: Sim, a função especifica dois parâmetros: t e tam.
-   :feedback_d: Os parâmetros incluem somente aquelas variáveis cujos valores a função espera receber como entrada. Eles são especificados no cabeçalho da função.
 
-   Quais são os parâmetros da seguinte função?
-   <pre>
-   def desenhaQuadrado(t, tam):
-       """Faca a tartaruga t desenhar um quadrado com lado tam."""
-       for i in range(4):
-	   t.forward(tam)
-	   t.left(90)
-   </pre>
+    Quais são os parâmetros da seguinte função?
+
+    .. sourcecode:: python
+
+        def desenhaQuadrado(t, tam):
+            """Faca a tartaruga t desenhar um quadrado com lado tam."""
+            for i in range(4):
+	            t.forward(tam)
+	            t.left(90)
+
+    - i
+    
+      - i é uma variável usada internamente pela função, mas não é um parâmetro passado para a função.
+    
+    - t
+    
+      - t é somente um dos parâmetros para esta função.
+    
+    - t, tam
+    
+      + Sim, a função especifica dois parâmetros: t e tam.
+
+    - t, tam, i
+
+      - Os parâmetros incluem somente aquelas variáveis cujos valores a função espera receber como entrada. Eles são especificados no cabeçalho da função.
 
 
 .. mchoice:: test_question5_1_6
-   :answer_a: def desenhaQuadrado(t, tam)
-   :answer_b: desenhaQuadrado
-   :answer_c: desenhaQuadrado(10)
-   :answer_d: desenhaQuadrado(alex, 10):
-   :answer_e: desenhaQuadrado(alex, 10)
-   :correct: e
-   :feedback_a: Não, t e tam são os nomes dos parâmetros formais desta função. Quando a função é chamada, ela requer que valores reais seja passados à ela.
-   :feedback_b: Uma chamada de função sempre requer parênteses depois do nome da função.
-   :feedback_c: Esta função tem dois parâmetros (argumentos).
-   :feedback_d: Os dois pontos são somente requeridos na definição da função. Eles causarão um erro com a chamada da função.
-   :feedback_e: Uma vez que alex já foi definido previamente e 10 é um valor, passamos dois valores corretos para esta função.
+    :multiple_answers:
+    :random:
 
-   Considerando a função abaixo, quais dos comandos seguintes chama a função corretamente (i.e., causa a execução da função)? Assuma que já definimos uma tartaruga de nome alex.
-   <pre>
-   def desenhaQuadrado(t, tam):
-       """Faca a tartaruga t desenhar um quadrado com lado tam."""
-       for i in range(4):
-           t.forward(tam)
-	   t.left(90)
-   </pre>
+    Considerando a função abaixo, quais dos comandos seguintes chama a função corretamente (i.e., causa a execução da função)? Assuma que já definimos uma tartaruga de nome alex.
+
+    .. sourcecode:: python 
+    
+        def desenhaQuadrado(t, tam):
+            """Faca a tartaruga t desenhar um quadrado com lado tam."""
+            for i in range(4):
+                t.forward(tam)
+	            t.left(90)
+
+    - def desenhaQuadrado(t, tam)
+    
+      - Não, t e tam são os nomes dos parâmetros formais desta função. Quando a função é chamada, ela requer que valores reais seja passados à ela.
+    
+    - desenhaQuadrado
+    
+      - Uma chamada de função sempre requer parênteses depois do nome da função.
+    
+    - desenhaQuadrado(10)
+    
+      - Esta função tem dois parâmetros (recebe dois argumentos).
+    
+    - desenhaQuadrado(alex, 10):
+    
+      - Os dois pontos são somente requeridos na definição da função. Eles causarão um erro com a chamada da função.
+    
+    - desenhaQuadrado(alex, 10)
+   
+      + Uma vez que alex já foi definido previamente e 10 é um valor, passamos dois valores válidos para esta função.
 
 
 .. mchoice:: test_question5_1_7
-   :answer_a: Verdadeiro
-   :answer_b: Falso
-   :correct: a
-   :feedback_a: Sim, você pode chamar uma função várias vezes colocando uma chamada em um laço.
-   :feedback_b: Uma das finalidades de uma função é permitir que você a chame mais do que uma vez. Colocando a chamada em um laço permite que ela seja executada várias vezes quando o corpo da função for executado várias vezes.
 
-   Verdadeiro ou Falso: Uma função pode ser chamada várias vezes colocando-se uma chamada para a função no corpo de um laço.
+    Verdadeiro ou Falso: Uma função pode ser chamada várias vezes colocando-se uma chamada para a função no corpo de um laço.
+
+    - Verdadeiro
+
+      + Sim, você pode chamar uma função várias vezes colocando uma chamada em um laço.
+
+    - Falso
+
+      -  Uma das finalidades de uma função é permitir que você a chame mais do que uma vez. Colocando a chamada em um laço permite que ela seja executada várias vezes quando o corpo da função for executado várias vezes.
+
 
 Funções que retornam valores
 ----------------------------
@@ -516,37 +549,55 @@ impresso quando a função retorna.
 **Teste seu entendimento**
 
 .. mchoice:: test_question5_2_1
-   :answer_a: Você nunca deve usar o comando print em uma definição de função.
-   :answer_b: Você não deveria ter nenhum comando na função depois do comando return. Uma vez que o comando return é atingido, a execução da função para imediatamente.
-   :answer_c: Você precisa calcular o valor de x+y+z antes de retorná-lo.
-   :answer_d: Uma função não pode retornar um número.
-   :correct: b
-   :feedback_a: Embora você não deva confundir print com return, você pode incluir comandos print dentro de suas funções.
-   :feedback_b: Este é um erro muito comum. Portanto, se certifique de olhar por isto quando você escreve o seu programa.
-   :feedback_c: Python calculará automaticamente o valor de x+y+z e então retornará esse valor como está escrito.
-   :feedback_d: Funções podem retornar qualquer dado válido, incluindo (mas não limitado a) números, strings, tartarugas, etc.
+    :random:
 
-   O que está errado com a seguinte definição de função:
-   <pre>
-   def somaEm(x, y, z):
-       return x+y+z
-       print('a resposta é', x+y+z)
-   </pre>
+    O que está errado com a seguinte definição de função:
+
+    .. sourcecode:: python
+
+        def somaEm(x, y, z):
+            return x+y+z
+            print('a resposta é', x+y+z)
+
+    - Você nunca deve usar o comando print em uma definição de função.
+
+      - Embora você não deva confundir print com return, você pode incluir comandos print dentro de suas funções.
+
+    - Você não deveria ter nenhum comando na função depois do comando return. Uma vez que o comando return é atingido, a execução da função para imediatamente.
+
+      + Este é um erro muito comum. Portanto, preste atenção sobre isso quando você escreve o seu programa. 
+
+    - Você precisa calcular o valor de x+y+z antes de retorná-lo.
+
+      - O Python calculará automaticamente o valor de x+y+z e então retornará esse valor como está escrito.
+
+    - Uma função não pode retornar um número.
+
+      - Funções podem retornar qualquer dado válido, incluindo (mas não limitado a) números, strings, tartarugas, etc.
+
 
 .. mchoice:: test_question5_2_2
-   :answer_a: Nada (nenhum valor)
-   :answer_b: O valor de x+y+z
-   :answer_c: O string 'x+y+z'
-   :correct: a
-   :feedback_a: Acidentalmente usamos print onde deveríamos ter usado return.  Este erro é MUITO COMUM, portanto cuidado! Ele também é particularmente difícil de achar porque quando você roda a função a saída parece a mesma. Somente quando você tenta atribuir seu valor a uma variável é que você nota a diferença.
-   :feedback_b: Cuidado! Este é um erro muito comum. Aqui você imprimiu o valor de x+y+z mas não o retornou. Para retornar o valor você PRECISA uasr o comando return.
-   :feedback_c: x+y+z calcula o número (assumindo que x, y e z são números) que representa a soma dos valores  x, y e z.
 
-   O que a seguinte função retorna?
-   <pre>
-   def somaEm(x, y, z):
-       print(x+y+z)
-   </pre>
+    O que a seguinte função retorna?
+   
+    .. sourcecode:: python
+
+        def somaEm(x, y, z):
+            print(x+y+z)
+
+
+    - Nada (nenhum valor)
+
+      + Acidentalmente usamos print onde deveríamos ter usado return.  Este erro é MUITO COMUM, portanto cuidado! Ele também é particularmente difícil de achar porque quando você roda a função a saída parece a mesma. Somente quando você tenta atribuir seu valor a uma variável é que você nota a diferença.
+    
+    - O valor de x+y+z
+
+      - Cuidado! Este é um erro muito comum. A função imprime o valor de x+y+z mas não o retorna. Para retornar o valor você PRECISA usar o comando return.
+
+    - O string 'x+y+z'
+
+      - x+y+z calcula o número (assumindo que x, y e z são números) que representa a soma dos valores  x, y e z.
+   
 
 Variáveis e parâmetros são locais
 ---------------------------------
@@ -817,27 +868,36 @@ Faça o passo-a-passo do programa e veja como a "somaparcial" acumula o resultad
 **Teste seu entendimento**
 
 .. mchoice:: test_question5_4_1
-   :answer_a: A função quadrado irá retornar x em vez de x*x.
-   :answer_b: A função quadrado causará um erro.
-   :answer_c: A função quadrado funcionará como esperado devolvendo x*x.
-   :answer_d: A função quadrado retornará 0 em vez de x*x.
-   :correct: a
-   :feedback_a: A variável somaparcial será reinicializada com 0 cada vez que houver um iteração do laço. Entretanto, porque esta atribuição acontece como o primeiro comando, o próximo comando no laço colocará seu valor de volta para x. Quando o laço termina, ele terá o valor de x, que é retornado.
-   :feedback_b: Atribuições são perfeitamente válidas dentro de laços e não causará um erro.
-   :feedback_c: Colocando a atribuição que atribui zero à somaparcial dentro do laço, a atribuição é executada cada vez que o laço é iterado, em vez de uma vez antes que o laço comece. O resultado é que a somaparcial é zerada (reinicializada com 0) cada vez que o laço é iterado.
-   :feedback_d: A linha somaparcial = 0 é a primeira linha do laço for, mas imediatamente depois dessa linha, a linha somaparcial = somaparcial + x é executada, dando à somaparcial um valor diferente de zero (assumindo que x é diferente de zero).
+    :random:
 
-   Considere o seguinte código:
-   <pre>
-   def quadrado(x):
-       somaparcial = 0
-       for cont in range(x):
-           somaparcial = somaparcial + x
-       return somaparcial
-   </pre>
-   O que acontece se você coloca a inicialização de somaparcial (a
-   linha somaparcial = 0) dentro do laço for como o primeiro comando
-   do laço?
+    Considere o seguinte código:
+    
+    .. sourcecode:: python
+
+        def quadrado(x):
+            somaparcial = 0
+            for cont in range(x):
+                somaparcial = somaparcial + x
+            return somaparcial
+
+    O que acontece se você coloca a inicialização de somaparcial (a linha somaparcial = 0) dentro do laço for como o primeiro comando do laço?
+
+    - A função quadrado irá retornar x em vez de x*x.
+    
+      + A variável somaparcial será reinicializada com 0 cada vez que houver um iteração do laço. Entretanto, como esta atribuição é o primeiro comando, o próximo comando no laço colocará seu valor de volta para x. Quando o laço termina ele terá o valor de x, que é retornado.
+    
+    - A função quadrado causará um erro.
+    
+      - Atribuições são perfeitamente válidas dentro de laços e não causará um erro.
+    
+    - A função quadrado funcionará como esperado devolvendo x*x.
+    
+      - Colocando a atribuição que atribui zero à somaparcial dentro do laço, a atribuição é executada cada vez que o laço é iterado, em vez de uma vez antes que o laço comece. O resultado é que a somaparcial é zerada (reinicializada com 0) cada vez que o laço é iterado.
+    
+    - A função quadrado retornará 0 em vez de x*x.
+    
+      - A linha somaparcial = 0 é a primeira linha do laço for, mas imediatamente depois dessa linha, a linha somaparcial = somaparcial + x é executada, dando à somaparcial um valor diferente de zero (assumindo que x é diferente de zero).
+
 
 
 Funções podem chamar outras funções
@@ -1070,33 +1130,46 @@ você deve pular o corpo da função até encontrar o ponto onde a função
 **Teste seu entendimento**
 
 .. mchoice:: test_question5_6_1
-   :answer_a: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-   :answer_b: 1, 2, 3, 5, 6, 7, 9, 10, 11
-   :answer_c: 9, 10, 11, 1, 2, 3, 5, 6, 7
-   :answer_d: 9, 10, 5, 6, 7, 1, 2, 3, 11
-   :answer_e: 1, 5, 9, 10, 6, 2, 3, 7, 11
-   :correct: e
-   :feedback_a: Embora Python tipicamente processa as linhas em ordem de cima para baixo, as definições de funções e chamadas são um execeção à essa regra.
-   :feedback_b: Embora Python tipicamente processa as linhas em ordem de cima para baixo, as definições de funções e chamadas são um execeção à essa regra. Embora essa ordem pule linhas em branco, é ainda uma lista de linhas do código em ordem.
-   :feedback_c: Esta está perto, no sentido de que Python não executará as funções até elas serem chamadas, mas existem dois problemas aqui. Primeiro, Python não sabe em quais linhas estão as definições de funções até que elas sejam processadas, de forma que ele precisa pelo menos processar o cabeçalho da função antes de pular as funções. Segundo, observe que a linha 10 involve uma chamada de função. Python precisa executar a função quadrado antes de ir para a linha 11.
-   :feedback_d: Esta está perto, no sentido de que Python não executará as funções até elas serem chamadas, mas existe um problema aqui. Python não sabe em quais linhas estão as definições de funções até que elas sejam processadas, de forma que ele precisa pelo menos processar o cabeçalho da função antes de pular as funções.
-   :feedback_e: Python começa na linha 1, percebe que é uma definição de função e pula todas as linhas da definição da função até ele encontrar uma linha que não está incluída na função (linha 5). Ele então percebe que a linha 5 também é uma definição de função e pula novamente o corpo da função até a linha 9. Na linha 10 ele percebe que tem que executar uma função, logo ele volta e executa o corpo da função. Observe que aquela função inclui outra chamada de função. Finalmente, ele voltará para a linha 11 depois da função quadrado terminar.
+    :random:
 
-   Considere o seguinte código em Python. Observe que os números das linhas estão incluídos à esquerda.
-   <pre>
-   1	def pot(b, p):
-   2	    y = b ** p
-   3	    return y
-   4	
-   5	def quadrado(x):
-   6	    a = pot(x, 2)
-   7	    return a
-   8	
-   9	n = 5
-   10   resultado = quadrado(n)
-   11   print(resultado)
-   </pre>
-   Quais dos seguintes melhor reflete a ordem em que as linhas de código são processadas em Python? 
+    Considere o seguinte código em Python. Observe que os números das linhas estão incluídos à esquerda.
+
+    .. sourcecode:: python
+        
+        1      def pot(b, p):
+        2          y = b ** p
+        3          return y
+        4
+        5      def quadrado(x):
+        6          a = pot(x, 2)
+        7          return a
+        8	
+        9      n = 5
+        10     resultado = quadrado(n)
+        11     print(resultado)
+
+    Quais dos seguintes melhor reflete a ordem em que as linhas de código são processadas em Python? 
+
+    - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+
+      - Embora o Python tipicamente processe as linhas de cima para baixo, as definições de funções e chamadas são exceções à essa regra.
+
+    - 1, 2, 3, 5, 6, 7, 9, 10, 11
+
+      - Embora o Python tipicamente processe as linhas de cima para baixo, as definições de funções e chamadas são exceções à essa regra. Embora essa ordem pule linhas em branco, continua uma lista ordenada das linhas.
+
+    - 9, 10, 11, 1, 2, 3, 5, 6, 7
+
+      - Esta está quase certa, no sentido de que o Python não executará as funções até elas serem chamadas, mas existem dois problemas aqui. Primeiro, o Python não sabe em quais linhas estão as definições de funções até que elas sejam processadas, de forma que ele precisa pelo menos processar o cabeçalho da função antes de pular as funções. Segundo, observe que a linha 10 contém uma chamada de função. O Python precisa executar a função quadrado antes de ir para a linha 11.
+
+    - 9, 10, 5, 6, 7, 1, 2, 3, 11
+
+      - Esta está quase certa, no sentido de que o Python não executará as funções até elas serem chamadas, mas existe um problema aqui. O Python não sabe em quais linhas estão as definições de funções até que elas sejam processadas, de forma que ele precisa pelo menos processar o cabeçalho da função antes de pular as funções.
+
+    - 1, 5, 9, 10, 6, 2, 3, 7, 11
+      
+      + Python começa na linha 1, percebe que é uma definição de função e pula todas as linhas da definição da função até ele encontrar uma linha que não está incluída na função (linha 5). Ele então percebe que a linha 5 também é uma definição de função e pula novamente o corpo da função até a linha 9. Na linha 10 ele percebe que tem que executar uma função, logo ele volta e executa o corpo da função. Observe que aquela função inclui outra chamada de função. Finalmente, ele voltará para a linha 11 depois da função quadrado terminar.
+  
 
 .. mchoice:: test_question5_6_2
    :answer_a: 25

@@ -195,26 +195,38 @@ conteúdo é mostrado até receber um clique.
 **Teste o seu entendimento**
 
 .. mchoice:: test_question3_1_1
-   :answer_a: Ela cria um novo objeto turtle que pode ser utilizado para desenhar
-   :answer_b: Ela nos permite criar um objeto chamado Turtle que pode ser usado para desenhar
-   :answer_c: Ele faz a tartaruga desenhar metade de um retângulo na janela
-   :answer_d: Nada, a linha é desnecessária
-   :correct: b
-   :feedback_a: A linha &quotalex = turtle.Turtle()&quot é que cria o objeto turtle
-   :feedback_b: Essa linha carrega o módulo chamado turtle, que contém todas as funções necessárias para desenhar com objetos do tipo Turtle
-   :feedback_c: Esse é o resultado das linhas &quotalex.forward(150)&quot, &quotalex.left(90)&quot, e &quotalex.forward(75)&quot
-   :feedback_d: Se essa linha não for incluída, o Python vai dar um erro dizendo que não conhece o nome &quotturtle&quot quando executar a linha &quotwn = turtle.Screen()&quot
+    :random:
+
+    Considere o seguinte código:
+
+    .. sourcecode:: python
+
+        import turtle            
+        wn = turtle.Screen()     
+        alex = turtle.Turtle()   
+        alex.forward(150)        
+        alex.left(90)            
+        alex.forward(75)  
+
+    Para que serve a linha `import turtle`?
+
+    - Ela cria um novo objeto turtle que pode ser utilizado para desenhar
+
+      - A linha `alex = turtle.Turtle()` é que cria o objeto turtle.
+
+    - Ela nos permite criar um objeto chamado Turtle que pode ser usado para desenhar
+
+      + Essa linha carrega o módulo chamado turtle, que contém todas as funções necessárias para desenhar com objetos do tipo Turtle.
+
+    - Ele faz a tartaruga desenhar metade de um retângulo na janela
+
+      - Esse é o resultado das linhas `alex.forward(150)`, `alex.left(90)`, e `alex.forward(75)`
+
+    - Nada, a linha é desnecessária
+
+      - Se essa linha não for incluída, o Python vai dar um erro dizendo que não conhece o nome `turtle` quando executar a linha `wn = turtle.Screen()`
+
    
-   Considere o seguinte código:
-   <pre>
-   import turtle            
-   wn = turtle.Screen()     
-   alex = turtle.Turtle()   
-   alex.forward(150)        
-   alex.left(90)            
-   alex.forward(75)  
-   </pre>       
-   Para que serve a linha "import turtle"?
 
 .. mchoice:: test_question3_1_2
    :answer_a: Apenas para melhorar a clareza. Podemos escrever também "Turtle()" ao invés de "turtle.Turtle()"
@@ -480,69 +492,103 @@ Nesse caso, o valor de ``aColor`` é usado para modificar o atributo cor de ``al
 
 **Check your understanding**
 
-.. mchoice:: test_question3_4_1
-   :answer_a: 1
-   :answer_b: 5
-   :answer_c: 6
-   :answer_d: 10
-   :correct: c
-   :feedback_a: O corpo do laço imprime uma linha, mas o corpo será executado exatamente uma vez para cada elemento na lista [5, 4, 3, 2, 1, 0]. 
-   :feedback_b: Embora o maior número na lista seja 5, há na realidade 6 elementos na lista. 
-   :feedback_c: O corpo do laço será executado (e imprimira uma linha) para cada um dos 6 elementos na lista [5, 4, 3, 2, 1, 0]
-   :feedback_d: O corpo do laço não será executado mais vezes que o número de elementos na lista.
+.. mchoice:: test_question3_4_1_lista
 
-   Quantas linhas são impressas pelo código a seguir?
-   <pre>
-   for numero in [5, 4, 3, 2, 1, 0]:
-      print("Eu tenho", numero, "biscoitos. Vou comer um.")
-   </pre>
+    Quantas linhas são impressas pelo código a seguir?
+
+    .. sourcecode:: python
+
+        for num in [5, 4, 3, 2, 1, 0]:
+            print("Eu tenho", num, "biscoitos. Vou comer um.")
+
+    - 1
+
+      - O corpo do laço imprime uma linha, mas o corpo será executado exatamente uma vez para cada elemento na lista [5, 4, 3, 2, 1, 0]. 
+
+    - 5
+
+      - Embora o maior número na lista seja 5, há na realidade 6 elementos na lista. 
+
+    - 6
+
+      + O corpo do laço será executado (e imprimirá uma linha) para cada um dos 6 elementos na lista [5, 4, 3, 2, 1, 0]
+
+    - 10
+
+      - O corpo do laço não será executado mais vezes que o número de elementos na lista.
+
 
 .. mchoice:: test_question3_4_2
-   :answer_a: As linhas ficam recuadas um tab do cabeçalho do laço
-   :answer_b: Sempre há apenas 1 linha no corpo do laço
-   :answer_c: O corpo do laço termina com um ponto e vírgula (;) que não foi mostrado no código acima
-   :correct: a
-   :feedback_a: O corpo do laço pode ter um número de linhas qualquer, todas recuadas do cabeçalho do laço.
-   :feedback_b: O corpo do laço pode ter mais de uma linha.
-   :feedback_c: O Python não usa ponto e vírgula em usa sintaxe. Ele se baseia na tabulação.
-   
+   :random:
+
    Como o Python sabe quais linhas fazem parte do corpo do laço?
 
-.. mchoice:: test_question3_4_3
-   :answer_a: 2
-   :answer_b: 4
-   :answer_c: 5
-   :answer_d: 1
-   :correct: b
-   :feedback_a: O Python atribui a numero o valor dos itens da lista, um de cada vez, em ordem (da esquerda para a direita). numero recebe um novo valor cada vez que o laço se repete.
-   :feedback_b: Sim, o Python processa os itens da esquerda para a direita, assim da primeira vez o valor é 5 e da segunda é 4.
-   :feedback_c: O Python dá a numero o valor dos itens da lista, um de cada vez, em ordem (da esquerda para a direita). numero recebe um novo valor cada vez que o laço se repete.
-   :feedback_d: O Python dá a numero o valor dos itens da lista, um de cada vez, em ordem (da esquerda para a direita). numero recebe um novo valor cada vez que o laço se repete.
+   - As linhas ficam recuadas um tab do cabeçalho do laço
+
+     + O corpo do laço pode ter um número de linhas qualquer, todas recuadas do cabeçalho do laço.
    
-   No código a seguir, qual o valor de numero da segunda vez que o Python executa o laço?
-   <pre>
-   for numero in [5, 4, 3, 2, 1, 0]:
-      print("Eu tenho", numero, "biscoitos. Vou comer um.")
-   </pre>
+   - Sempre há apenas 1 linha no corpo do laço
+   
+     - Como o Python sabe quais linhas fazem parte do corpo do laço?
+
+   - O corpo do laço termina com um ponto e vírgula (;) que não foi mostrado no código acima
+
+     - O Python não usa ponto e vírgula em usa sintaxe. Ele se baseia na tabulação.
+   
+
+.. mchoice:: test_question3_4_3
+    :random:
+
+    No código a seguir, qual o valor de `num` da segunda vez que o Python executa o laço?
+
+    .. sourcecode:: python
+   
+        for num in [5, 4, 3, 2, 1, 0]:
+            print("Eu tenho", num, "biscoitos. Vou comer um.")
+
+    - 2 
+
+      - O Python atribui a `num` o valor dos itens da lista, um de cada vez, em ordem (da esquerda para a direita). `num` recebe um novo valor cada vez que o laço se repete.
+
+    - 4
+
+      + Sim, o Python processa os itens da esquerda para a direita, assim da primeira vez o valor é 5 e da segunda é 4.
+
+    - 5
+
+      - O Python dá a `num` o valor dos itens da lista, um de cada vez, em ordem (da esquerda para a direita). `num` recebe um novo valor cada vez que o laço se repete.
+
+    - 1
+
+      - O Python dá a `num` o valor dos itens da lista, um de cada vez, em ordem (da esquerda para a direita). `num` recebe um novo valor cada vez que o laço se repete.
+
 
 
 .. mchoice:: test_question3_4_4
-   :answer_a: Desenha um lado de um quadrado, usando a mesma cor todas as vezes.
-   :answer_b: Desenha um lado de um quadrado, usando uma cor diferente a cada vez.
-   :answer_c: Desenha um quadrado completo.
-   :correct: a
-   :feedback_a: Os itens da lista não são realmente utilizados para controlar a cor da tartaruga porque aColor nunca é usado dentro do laço.
-   :feedback_b: Observe que aColor nunca é usado dentro do laço.
-   :feedback_c: O corpo do laço contém apenas duas instruções: siga em frente e vire à esquerda. Isso não é o suficiente para desenhar um quadrado completo.
-   
-   Considere o seguinte código:
-   <pre>
-   for aColor in ["yellow", "red", "green", "blue"]:
-      alex.forward(50)
-      alex.left(90)
-   </pre>
-   O que cada iteração do loop (ou seja, "pedaço de código") faz?
 
+    Considere o seguinte código:
+
+    .. sourcecode:: python
+    
+        for aColor in ["yellow", "red", "green", "blue"]:
+            alex.forward(50)
+            alex.left(90)
+
+    O que cada iteração do loop (ou seja, "pedaço de código") faz?
+
+
+    - Desenha um lado de um quadrado, usando a mesma cor todas as vezes.
+
+      + Os itens da lista não são realmente utilizados para controlar a cor da tartaruga porque aColor nunca é usada dentro do laço.
+   
+    - Desenha um lado de um quadrado, usando uma cor diferente a cada vez.
+
+      - Observe que aColor nunca é usada dentro do laço.
+
+    - Desenha um quadrado completo.
+
+      - O corpo do laço contém apenas duas instruções: siga em frente (forward) e vire à esquerda (left). Isso não é o suficiente para desenhar um quadrado completo.
+   
 
 A função range
 --------------
@@ -658,43 +704,69 @@ Experimente no codelens.
 **Teste o seu entendimento**
 
 .. mchoice:: test_question3_5_1
-  :answer_a: Range deve gerar uma lista que pára em 9 (incluindo 9).
-  :answer_b: Range deve gerar uma lista que começa em 10 (incluindo 10). 
-  :answer_c: Range deve gerar uma lista a partir de 3, que pára em 10 (incluindo 10). 
-  :answer_d: Range deve gerar uma lista usando todo décimo número entre o início e o fim.
-  :correct: a
-  :feedback_a: Range vai gerar a lista [3, 5, 7, 9]
-  :feedback_b: O primeiro argumento (3) define o início.
-  :feedback_c: Range pára no número anterior (não inclui) o número que define o fim da sequência.
-  :feedback_d: O terceiro elemento (2) define quantos números devem ser pulados (passo) entre cada elemento da lista.
+    :random:
 
-  No comando range(3, 10, 2), o que é definido pelo segundo argumento (10)?
+    No comando range(3, 10, 2), o que é definido pelo segundo argumento (10)?
+
+    - Range deve gerar uma lista que pára em 9 (incluindo 9).
+
+      + range(3, 10, 2) vai gerar a lista [3, 5, 7, 9]
+
+    - Range deve gerar uma lista que começa em 10 (incluindo 10). 
+
+      - O primeiro argumento (3) define o início.
+
+    - Range deve gerar uma lista a partir de 3, que pára em 10 (incluindo 10). 
+
+      - range(3, 10, 2) para no número anterior (não inclui) o número que define o fim da sequência.
+
+    - range(3, 10, 2) deve gerar uma lista usando todo décimo número entre o início e o fim.
+
+      - O terceiro elemento (2) define quantos números devem ser pulados (passo) entre cada elemento da lista.
 
 .. mchoice:: test_question3_5_2
-  :answer_a: range(2, 5, 8)
-  :answer_b: range(2, 8, 3)
-  :answer_c: range(2, 10, 3)
-  :answer_d: range(8, 1, -3)
-  :correct: c
-  :feedback_a: Este comando gera a lista [2], porque o primeiro número (2) diz a range por onde começar, o segundo número diz o fim do intervalo (5, que não é incluído) e o terceiro número diz a range quantos números ele deve saltar entre elementos da lista (8). Como 10 >= 5, existe apenas um número nesta lista.
-  :feedback_b: This command generates the list [2, 5] because 8 is not less than 8 (the specified ending number).
-  :feedback_c: The first number is the starting point, the second is the maximum allowed, and the third is the amount to increment by.  
-  :feedback_d: This command generates the list [8, 5, 3] because it starts at 8, ends at (or above 1), and skips every third number going down.
+    :random:
+
+    Que comando gera a lista [2, 5, 8]?
+
+    - range(2, 5, 8)
+
+      - Este comando gera a lista [2], pois o primeiro número (2) diz a range por onde começar, o segundo número diz o fim do intervalo (5, que não é incluído) e o terceiro número diz a range quantos números ele deve saltar entre elementos da lista (8). Como 10 >= 5, existe apenas um número nesta lista.
+
+    - range(2, 8, 3)
+
+      - Esse comando gera a lista [2, 5] pois 8 não é menor que 8 (especificado como fim do intervalo).
+
+    - range(2, 10, 3)
+
+      + O primeiro número é o início, o segundo é o máximo permitido, e o terceiro é o valor a ser incrementado.
+
+    - range(8, 1, -3)
+
+      - Esse comando gera a lista [8, 5, 3] pois começa em 8 e termina em (ou antes de) 1, e pula todo terceiro elemento para baixo.
   
-  Que comando gera a lista [2, 5, 8]?
   
 .. mchoice:: test_question3_5_3
-  :answer_a: Range vai gerar uma lista começando em 0, com todos os números até, mas não incluindo, o argumento que foi passado.
-  :answer_b: Range vai gerar uma lista começando em 1, com todos os números até, mas não incluindo, o argumento que foi passado.
-  :answer_c: Range vai gerar uma lista começando em 1, com todos os números até o argumento que foi passado, incluindo o mesmo.
-  :answer_d: A chamada causa um erro: range requer sempre 3 argumentos.
-  :correct: a
-  :feedback_a: Sim, se você passar apenas um argumento, ele começa com zero e termina um número antes do argumento especificado.
-  :feedback_b: Range começa do 0, a menos que outro número seja especificado.
-  :feedback_c: Range começa do 0, a menos que outro número seja especificado e nunca inclui o número que define o fim (que é o caso quando apenas um argumento é passado).
-  :feedback_d: Quando o range recebe apenas um argumento, ele o interpreta como sendo o fim da lista (não incluído). 
+    :random:
 
-  O que acontece quando range recebe apenas um argumento? Por exemplo: range(4)
+    O que acontece quando range recebe apenas um argumento? Por exemplo: range(4)
+
+    - Range vai gerar uma lista começando em 0, com todos os números até, mas não incluindo, o argumento que foi passado.
+
+      + Sim, se você passar apenas um argumento, ele começa do zero e termina um número antes do argumento especificado.
+
+    - Range vai gerar uma lista começando em 1, com todos os números até, mas não incluindo, o argumento que foi passado.
+
+      - range começa do 0, a menos que outro número seja especificado.
+
+    - Range vai gerar uma lista começando em 1, com todos os números até o argumento que foi passado, incluindo o mesmo.
+
+      - range começa do 0, a menos que outro número seja especificado e nunca inclui o número que define o fim (que é o caso quando apenas um argumento é passado).
+
+    - A chamada causa um erro: range requer sempre 3 argumentos.
+
+      - Quando o range recebe apenas um argumento, ele o interpreta como sendo o fim da lista (não incluído). 
+
 
 .. admonition:: Editor Scratch
 

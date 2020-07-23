@@ -166,18 +166,18 @@ html_theme = 'sphinx_bootstrap'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {'nosidebar': 'true'}
-#html_theme_options = {
+html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
- #   'navbar_title': "PensePython",
+    'navbar_title': "PensePython",
     # 'navbar_title': project,
 
     # Tab name for entire site. (Default: "Site")
     # 'navbar_site_name': "Chapters",
-#    'navbar_site_name': "Capítulos",
+    'navbar_site_name': "Capítulos",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
- #   'globaltoc_depth': 1,
+    'globaltoc_depth': 1,
 
     # Include hidden TOCs in Site navbar?
     #
@@ -186,19 +186,19 @@ html_theme = 'sphinx_bootstrap'
     # will break.
     #
     # Values: "true" (default) or "false"
-#    'globaltoc_includehidden': "true",
+    'globaltoc_includehidden': "true",
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-#    'navbar_class': "navbar",
+    'navbar_class': "navbar",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-#    'navbar_fixed_top': "true",
+    'navbar_fixed_top': "true",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-#    'source_link_position': "nav",
+    'source_link_position': "nav",
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
@@ -207,7 +207,7 @@ html_theme = 'sphinx_bootstrap'
     #
     # Note that this is served off CDN, so won't be available offline.
     #'bootswatch_theme': "slate",
-#}
+}
 
 # This is set up to use the default runestone themes, you can override them by
 # creating your own folder and modifying this path.
@@ -244,11 +244,11 @@ html_static_path = runestone_static_dirs() + ['./_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
-#html_use_smartypants = True
+html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
@@ -261,10 +261,10 @@ html_static_path = runestone_static_dirs() + ['./_static']
 #html_domain_indices = True
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
-#html_split_index = False
+html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
 html_show_sourcelink = False
