@@ -27,17 +27,22 @@ Aprendendo com Python: Edição interativa (usando Python 3.x)
 
 Tradução do livro `How to Think Like a Computer Scientist: Interactive Version <https://runestone.academy/runestone/books/published/thinkcspy/index.html>`_
 
-de Brad Miller e David Ranum
+de Brad Miller e David Ranum [Luther College]
 
 .. raw:: html
 
-    <p style align="right">
-    Tradutores: C. H. Morimoto, J. C. de Pina Jr. e J. A. Soares 
+    <p></p>
+    <p style="text-align:right">
+    Traduzido por: C. H. Morimoto, J. C. de Pina Jr. e J. A. Soares 
     </p>
+    <p></p>
+    <p style="text-align:right">
+    <a href="https://github.com/cmorimoto/thinkcspy_ptbr">Arquivos fonte dessa tradução.</a>
+    </p>
+    
 
 .. por Brad Miller e David Ranum
 
-   Luther College
 
 Preâmbulos
 ::::::::::

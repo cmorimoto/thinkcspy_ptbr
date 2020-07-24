@@ -36,7 +36,7 @@ extensions = ['sphinx.ext.mathjax'] + runestone_extensions()
 # for your own project you can over ride them by creating your own _templates folder
 # templates_path = [pkg_resources.resource_filename('runestone', 'common/project_template/_templates')]
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../_templates']
+#templates_path = ['../_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -157,8 +157,8 @@ inline_highlight_literals = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinx_bootstrap'
-#html_theme = 'default'
+#html_theme = 'sphinx_bootstrap'
+html_theme = 'default'
 
 #html_style = "panda.css"
 
