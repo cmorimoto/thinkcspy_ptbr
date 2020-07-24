@@ -86,7 +86,7 @@ Observe que todas as funcionalidades de uma tartaruga (turtle) que já falamos a
    :correct: a
    :feedback_a: Um módulo pode ser reutilizado em programas diferentes.
    :feedback_b: Um módulo é um bloco separado de código mas ele é separado do programa.
-   :feedback_c: A chamada de uma função de um módulo pode ser uma linha de código mas módulos são em geral constituidas de múltiplas linhas de código separadas do programa.
+   :feedback_c: A chamada de uma função de um módulo pode ser uma linha de código mas módulos são em geral constituídas de múltiplas linhas de código separadas do programa.
    :feedback_d: Cada módulo possui a sua própria documentação, mas o módulo em si é mais que apenas a documentação.
 
    Em Python um módulo é:

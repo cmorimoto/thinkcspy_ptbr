@@ -86,33 +86,40 @@ A chave ``'two'`` resulta no valor ``'dos'``.
 **Teste seu entendimento**
 
 .. mchoice:: test_question11_1_1 
-   :answer_a: False
-   :answer_b: True
+    - False
+    - True
    :correct: b
-   :feedback_a: Dicionários associam chaves com valores mas não há uma ordenação das entradas.
-   :feedback_b: Sim, dicionários são coleções associativas, o que significa que eles armazenam pares chave-valor.
+    - Dicionários associam chaves com valores mas não há uma ordenação das entradas.
+    - Sim, dicionários são coleções associativas, o que significa que eles armazenam pares chave-valor.
 
    Um dicionário é uma coleção não ordenada de pares chave-valor.
 
 
 .. mchoice:: test_question11_1_2
-   :answer_a: 12
-   :answer_b: 6
-   :answer_c: 23
-   :answer_d: Error, you cannot use the index operator with a dictionary.
-   :correct: b
-   :feedback_a: 12 está associado com a chave cat.
-   :feedback_b: Yes, 6 está associado com a chave dog.
-   :feedback_c: 23 está associado com a chave elephant.
-   :feedback_d: O operador [ ], quando usado com dicionário, vai procurar um valor baseado na chave.
+
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+
+        mydict = {"cat":12, "dog":6, "elephant":23}
+        print(mydict["dog"])
+
+    - 12
+
+      - 12 está associado com a chave cat.
+
+    - 6
+
+      + Yes, 6 está associado com a chave dog.
+
+    - 23
+
+      - 23 está associado com a chave elephant.
+
+    - Erro, você não pode usar o operador índice [ ] com um dicionário.
+
+      - O operador [ ], quando usado com dicionário, vai procurar um valor baseado na chave.
    
-   
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   mydict = {"cat":12, "dog":6, "elephant":23}
-   print(mydict["dog"])
-   </pre>
 
 .. index:: comando del, del; comando
 
@@ -161,24 +168,31 @@ Observe que há agora 512 bananas --- o dicionário foi modificado. Note também
 **Teste seu entendimento**
 
 .. mchoice:: test_question11_2_1
-   :answer_a: 12
-   :answer_b: 0
-   :answer_c: 18
-   :answer_d: Error, there is no entry with mouse as the key.
-   :correct: c
-   :feedback_a: 12 está associado à chave cat.
-   :feedback_b: A chave mouse ficará associada com a soma de dois valores.
-   :feedback_c: Sim, some o valor para cat e o valor para dog (12 + 6) e crie uma nova entrada para mouse.
-   :feedback_d: Como a nova chave é introduzida na esquerda de um comando de atribuição, um novo par chave-valor é adicionado ao dicionário.
    
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+        
+        mydict = {"cat":12, "dog":6, "elephant":23}
+        mydict["mouse"] = mydict["cat"] + mydict["dog"]
+        print(mydict["mouse"])
+
+    - 12
+    
+      - 12 está associado à chave cat.
+    
+    - 0
+    
+      - A chave mouse ficará associada com a soma de dois valores.
+    
+    - 18
+    
+      + Sim, some o valor para cat e o valor para dog (12 + 6) e crie uma nova entrada para mouse.
+    
+    - Erro, não há entrada com a chave "mouse".
+
+      - Como a nova chave é introduzida na esquerda de um comando de atribuição, um novo par chave-valor é adicionado ao dicionário.
    
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   mydict = {"cat":12, "dog":6, "elephant":23}
-   mydict["mouse"] = mydict["cat"] + mydict["dog"]
-   print(mydict["mouse"])
-   </pre>
 
 
 
@@ -275,102 +289,126 @@ O método ``get`` nos permite acessar o valor associado a uma chave, similar ao 
 **Teste seu entendimento**
 
 .. mchoice:: test_question11_3_1
-   :answer_a: cat
-   :answer_b: dog
-   :answer_c: elephant
-   :answer_d: bear
-   :correct: c
-   :feedback_a: keylist é uma lista de todas as chaves que é então ordenada. cat teria o índice 1.
-   :feedback_b: keylist é uma lista de todas as chaves que é então ordenada. dog teria o índice 2.
-   :feedback_c: Sim, a lista de chaves é ordenada e o item de índice 3 é impresso.
-   :feedback_d: keylist é uma lista de todas as chaves que é então ordenada. bear teria o índice 0.
-   
-   
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
-   keylist = list(mydict.keys())
-   keylist.sort()
-   print(keylist[3])
-   </pre>
+
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+        
+        mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+        keylist = list(mydict.keys())
+        keylist.sort()
+        print(keylist[3])
+
+    - cat
+
+      - keylist é uma lista de todas as chaves que é então ordenada. cat teria o índice 1.
+
+    - dog
+
+      - keylist é uma lista de todas as chaves que é então ordenada. dog teria o índice 2.
+
+    - elephant
+
+      + Sim, a lista de chaves é ordenada e o item de índice 3 é impresso.
+
+    - bear
+
+      - keylist é uma lista de todas as chaves que é então ordenada. bear teria o índice 0.
    
    
 .. mchoice:: test_question11_3_2
-   :answer_a: 2
-   :answer_b: 0.5
-   :answer_c: bear
-   :answer_d: Erro, divisão não é uma operação válida em dicionários.
-   :correct: a
-   :feedback_a: get retorna o valor associado com uma dada chave, assim o programa divide 12 por 6.
-   :feedback_b: 12 é dividido por 6, não o inverso.
-   :feedback_c: Dê uma nova olhada no exemplo de get dado acima. get retorna o valor associado com uma dada chave.
-   :feedback_d: O operador de divisão inteira está sendo usado sobre os valores retornados pelo método get, não sobre o dicionário.
+
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+        
+        mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+        answer = mydict.get("cat")//mydict.get("dog")
+        print(answer)
    
-   
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
-   answer = mydict.get("cat")//mydict.get("dog")
-   print(answer)
-   </pre>
-   
+
+    - 2
+
+      + get retorna o valor associado com uma dada chave, assim o programa divide 12 por 6.
+
+    - 0.5
+
+      - 12 é dividido por 6, não o inverso.
+
+    - bear
+
+      - Dê uma nova olhada no exemplo de get dado acima. get retorna o valor associado com uma dada chave.
+
+    - Erro, divisão não é uma operação válida em dicionários.
+
+      - O operador de divisão inteira está sendo usado sobre os valores retornados pelo método get, não sobre o dicionário.
+
    
 .. mchoice:: test_question11_3_3
-   :answer_a: True
-   :answer_b: False
-   :correct: a
-   :feedback_a: Sim, dog é uma chave no dicionário.
-   :feedback_b: O operador in retorna True se a chave está no dicionário, False em caso contrário.
-   
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
-   print("dog" in mydict)
-   </pre>
 
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+        
+        mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+        print("dog" in mydict)
+
+    - True
+
+      + Sim, dog é uma chave no dicionário.
+
+    - False
+
+      - O operador in retorna True se a chave está no dicionário, False em caso contrário.
+   
 
 .. mchoice:: test_question11_3_4
-   :answer_a: True
-   :answer_b: False
-   :correct: b
-   :feedback_a: 23 é um valor no dicionário, não uma chave.
-   :feedback_b: Sim, o operador in retorna True se a chave está no dicionário, False em caso contrário.
-   
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
-   print(23 in mydict)
-   </pre>
+
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+        
+        mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+        print(23 in mydict)
+
+    - True
+
+      - 23 é um valor no dicionário, não uma chave.
+
+    - False
+
+      + Sim, o operador in retorna True se a chave está no dicionário, False em caso contrário.
 
 
 .. mchoice:: test_question11_3_5
-   :answer_a: 18
-   :answer_b: 43
-   :answer_c: 0
-   :answer_d: 61
-   :correct: b
-   :feedback_a: Some os valores que tem chaves maiores que 3, não iguais a 3.
-   :feedback_b: Sim, o laço for itera sobre as chaves. Ele soma os valores das chaves que tem comprimento maior que 3.
-   :feedback_c: Este é o padrão de acumulação. total começa com 0 mas muda a medida que a iteração prossegue.
-   :feedback_d: Nem todos os valores são somados. O comando if escolhe apenas alguns. 
    
-   
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   total = 0
-   mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
-   for akey in mydict:
-      if len(akey) > 3:
-         total = total + mydict[akey]
-   print(total)
-   
-   </pre>
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+        
+        total = 0
+        mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+        for akey in mydict:
+            if len(akey) > 3:
+                total = total + mydict[akey]
+         print(total)
 
+    - 18
+
+      - Some os valores que tem chaves maiores que 3, não iguais a 3.
+
+    - 43
+
+      + Sim, o laço for itera sobre as chaves. Ele soma os valores das chaves que tem comprimento maior que 3.
+
+    - 0
+
+      - Este é o padrão de acumulação. total começa com 0 mas muda a medida que a iteração prossegue.
+
+    - 61
+
+      - Nem todos os valores são somados. O comando if escolhe apenas alguns. 
+   
 .. index:: aliases
 
 Apelidos and cópias
@@ -404,24 +442,32 @@ Se você deseja modificar um dicionário e manter uma cópia do original, use o 
 **Teste seu entendimento**
 
 .. mchoice:: test_question11_4_1
-   :answer_a: 23
-   :answer_b: None
-   :answer_c: 999
-   :answer_d: Erro, há duas chaves de nome elephant.
-   :correct: c
-   :feedback_a: mydict e yourdict são ambos nomes do mesmo dicionário.
-   :feedback_b: O dicionário é mutável, assim mudanças podem ser feitas para as chaves e valores.
-   :feedback_c: Sim, como yourdict é um apelido para mydict, o valor para a chave elephant foi trocada.
-   :feedback_d: Há apenas um dicionário com somente uma chave chamada elephant. O dicionário tem dois nome diferentes, mydict e yourdict.
-   
-   O que é impresso pelos seguintes comandos?
-   
-   <pre>
-   mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
-   yourdict = mydict
-   yourdict["elephant"] = 999
-   print(mydict["elephant"])
-   </pre>
+
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
+        
+        mydict = {"cat":12, "dog":6, "elephant":23, "bear":20}
+        yourdict = mydict
+        yourdict["elephant"] = 999
+        print(mydict["elephant"])
+
+    - 23
+
+      - mydict e yourdict são ambos nomes do mesmo dicionário.
+
+    - None
+
+      - O dicionário é mutável, assim mudanças podem ser feitas para as chaves e valores.
+
+    - 999
+
+      + Sim, como yourdict é um apelido para mydict, o valor para a chave elephant foi trocada.
+
+    - Erro, há duas chaves de nome elephant.
+
+      - Há apenas um dicionário com somente uma chave chamada elephant. O dicionário tem dois nome diferentes, mydict e yourdict.
+
 
 .. index:: matrix
 

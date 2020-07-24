@@ -121,7 +121,7 @@ Note também que um teste de igualdade é simétrico, mas atribuição não
    :answer_b: 3 == 4
    :answer_c: 3 + 4
    :answer_d: 3 + 4 == 7
-   :answer_e: &quot;False&quot;
+   :answer_e: "False"
    :correct: a,b,d
    :feedback_a: True e False são ambas  literais booleanas.
    :feedback_b: A comparação entre dois números usando == resulta em True ou False (neste caso False), ambos valores booleanos.
@@ -190,7 +190,7 @@ que ``not  x > y`` é verdadeiro se ``x > y`` é falso, isto é, se ``x``
 Precedência de operadores
 -------------------------
 
-Adicionamos um certo número de operadores àqueles que aprendemos nos capítulos anteriores. É importante entender como os operadores se relacionam entre si em relação à precedência. Python sempre usará os operadores aritméticos primeiro (exponenciação primeiro, depois multiplicação/divisão e depois adição/subtração). Depois vêm os operadores relacionais. Finalmente, os operadores lógicos vêm por último. Isto quer dizer que o valor da expressão ``x*5 >= 10 and y-6 <= 20`` será determinado de forma que as operações aritméticas são feitas e depois as relações. O ``and`` será deixado por último. Embora muitos programadores poderiam colocar parentêses nas expressões relacionais, isto não é necessário.
+Adicionamos um certo número de operadores àqueles que aprendemos nos capítulos anteriores. É importante entender como os operadores se relacionam entre si em relação à precedência. Python sempre usará os operadores aritméticos primeiro (exponenciação primeiro, depois multiplicação/divisão e depois adição/subtração). Depois vêm os operadores relacionais. Finalmente, os operadores lógicos vêm por último. Isto quer dizer que o valor da expressão ``x*5 >= 10 and y-6 <= 20`` será determinado de forma que as operações aritméticas são feitas e depois as relações. O ``and`` será deixado por último. Embora muitos programadores poderiam colocar parênteses nas expressões relacionais, isto não é necessário.
 
 A tabela seguinte resume a precedência dos operadores em Python do maior ao menor. A tabela completa da linguagem pode ser encontrada em `Python Documentation <http://docs.python.org/py3k/reference/expressions.html#expression-lists>`_.
 
@@ -218,10 +218,10 @@ Nível      Categoria        Operadores
    :answer_c: ((((5*3) &gt; 10) and 4)+6) == 11
    :answer_d: ((5*3) &gt; (10 and (4+6))) == 11
    :correct: a
-   :feedback_a: Sim, * e + têm as maiores precedências, seguidos por &gt; e == e então o operador &quot;and&quot;
+   :feedback_a: Sim, * e + têm as maiores precedências, seguidos por &gt; e == e então o operador "and"
    :feedback_b: Operadores aritméticos (*, +) têm maior precedência do que os operadores de comparação (&gt;, ==)
    :feedback_c: Este agrupamento assume que Python simplesmente prioriza da esquerda para a direita, o que é incorreto. O agrupamento correto segue a precedência listada na tabela nesta seção.
-   :feedback_d: Este agrupamento assume que &quot;and&quot; tem uma precedência maior que que ==, o que não é verdadeiro. 
+   :feedback_d: Este agrupamento assume que "and" tem uma precedência maior que que ==, o que não é verdadeiro. 
 
    Quais das seguintes expressões corresponde, usando parênteses, à seguinte expressão: 5*3 > 10 and 4+6==11
 
@@ -326,76 +326,110 @@ bloco.
    Quantos comandos podem aparecer em cada bloco (o do if e o do else) em um comando condicional?
 
 .. mchoice:: test_question6_4_2
-   :answer_a: Saída a
-   :answer_b: Saída b
-   :answer_c: Saída c
-   :answer_d: Nada será impresso
-   :correct: b
-   :feedback_a: VERDADEIRO é impresso pelo bloco do if, o qual é executado somente se o condicional (neste caso, 4+5 == 10) é verdadeiro. Neste caso, 5+4 não é igual a 10.
-   :feedback_b: Como 4+5==10 tem valor False, Python pulará o bloco do if e executará o comando do bloco do else.
-   :feedback_c: Python nunca imprimirá ambos VERDADEIRO e FALSO porque ele executará ou o bloco do if ou o bloco do else, mas nunca ambos.
-   :feedback_d: Python sempre executará ou o bloco do if (se a condição é verdadeira) ou o bloco do else (se a condição é falsa).  Ele nunca pulará os dois blocos.
 
-   O que o seguinte código imprime (escolha entre as saídas a, b, c ou nada).
-   <pre>
-   if (4 + 5 == 10):
-       print("VERDADEIRO")
-   else:
-       print("FALSO")
-   </pre>
-   a.
-   <pre>
-   VERDADEIRO
-   </pre>
-   b.
-   <pre>
-   FALSO
-   </pre>
-   c.
-   <pre>
-   VERDADEIRO
-   FALSO
-   </pre>
+    O que o seguinte código imprime (escolha entre as saídas a, b, c ou nada).
+    
+    .. sourcecode:: python
+
+        if (4 + 5 == 10):
+            print("VERDADEIRO")
+        else:
+            print("FALSO")
+
+    Saída a
+
+    .. sourcecode:: python
+
+        VERDADEIRO
+
+    Saída b
+
+    .. sourcecode:: python
+
+        FALSO
+
+    Saída c
+
+    .. sourcecode:: python
+
+        VERDADEIRO
+        FALSO
+
+    - Saída a
+
+      - VERDADEIRO é impresso pelo bloco do if, o qual é executado somente se o condicional (neste caso, 4+5 == 10) é verdadeiro. Neste caso, 5+4 não é igual a 10.
+
+    - Saída b
+
+      + Como 4+5==10 tem valor False, o Python pulará o bloco do if e executará o comando do bloco do else.
+
+    - Saída c
+
+      - o Python nunca imprimirá ambos VERDADEIRO e FALSO porque ele executará ou o bloco do if ou o bloco do else, mas nunca ambos.
+
+    - Nada será impresso
+
+      - o Python sempre executará ou o bloco do if (se a condição é verdadeira) ou o bloco do else (se a condição é falsa).  Ele nunca pulará os dois blocos.
+
 
 .. mchoice:: test_question6_4_3
-   :answer_a: Saída a
-   :answer_b: Saída b
-   :answer_c: Saída c
-   :answer_d: Saída d
-   :correct: c
-   :feedback_a: Embora VERDADEIRO seja impresso depois que o comando if-else termina, cada bloco dentro do comando if-else imprime algo também.  Neste caso, Python teria que ter pulado ambos os blocos do comando if-else, o que ele nunca faria.
-   :feedback_b: Como há um VERDADEIRO impresso depois que o comando if-else termina, Python sempre imprimirá VERDADEIRO por último.
-   :feedback_c: Python imprimirá FALSO dentro do bloco do else (porque 5+4 não é igual a 10), e então imprimirá VERDADEIRO depois de completar o comando  if-else.
-   :feedback_d: Para imprimir estas três linhas, Python teria que executar ambos os blocos do comando  if-else, o que ele nunca fará.
 
-   O que o seguinte código imprime?
-   <pre>
-   if (4 + 5 == 10):
-       print("VERDADEIRO")
-   else:
-       print("FALSO")
-   print("VERDADEIRO")
-   </pre>
-    a.
-   <pre>
-   VERDADEIRO
-   </pre>
-   b.
-   <pre>
-   VERDADEIRO
-   FALSO
-   </pre>
-   c.
-   <pre>
-   FALSO
-   VERDADEIRO
-   </pre>
-   d.
-   <pre>
-   VERDADEIRO
-   FALSO
-   VERDADEIRO
-   </pre>
+    O que o seguinte código imprime?
+   
+    .. sourcecode:: python
+
+        if (4 + 5 == 10):
+            print("VERDADEIRO")
+        else:
+            print("FALSO")
+        print("VERDADEIRO")
+
+    Saída a
+
+    .. sourcecode:: python
+
+        VERDADEIRO
+
+    Saída b
+
+    .. sourcecode:: python
+
+        VERDADEIRO
+        FALSO
+
+    Saída c
+
+    .. sourcecode:: python
+
+        FALSO
+        VERDADEIRO
+
+    Saída d
+
+    .. sourcecode:: python
+
+        VERDADEIRO
+        FALSO
+        VERDADEIRO
+
+
+    - Saída a
+    
+      - Embora VERDADEIRO seja impresso depois que o comando if-else termina, cada bloco dentro do comando if-else imprime algo também.  Neste caso, o Python teria que ter pulado ambos os blocos do comando if-else, o que ele nunca faria.
+    
+    - Saída b
+    
+      - Como há um VERDADEIRO impresso depois que o comando if-else termina, o Python sempre imprimirá VERDADEIRO por último.
+    
+    - Saída c
+    
+      + o Python imprimirá FALSO dentro do bloco do else (porque 5+4 não é igual a 10), e então imprimirá VERDADEIRO depois de completar o comando  if-else.
+    
+    - Saída d
+
+      - Para imprimir estas três linhas, Python teria que executar ambos os blocos do comando  if-else, o que ele nunca fará.
+
+
 
 
 .. index:: execução alternativa, ramificação
@@ -440,54 +474,77 @@ O que é impresso quando o valor de `` x`` é  negativo?  Tente isso.
 **Teste seu entendimento**
 
 .. mchoice:: test_question6_5_1
-   :answer_a: Saída a
-   :answer_b: Saída b
-   :answer_c: Saída c
-   :answer_d: Causará um erro porque todo if deve ter um else.
-   :correct: b
-   :feedback_a: Porque -10 é menor do que 0, Python executará o corpo do comando if aqui.
-   :feedback_b: Python executa o corpo do bloco do if bem como o comando que segue o bloco do if.
-   :feedback_c: Python executará o comando que segue o bloco if (porque ele está no bloco do else, mas como um comando normal).
-   :feedback_d: É válido ter um bloco do if sem um bloco do else correspondente (embora você não possa ter um bloco do else sem um bloco do if correspondente).
 
-   O que o seguinte código imprime?
-   <pre>
-   x = -10
-   if x < 0:
-       print("O número negativo ",  x, " não é válido aqui.")
-   print("Isto é sempre impresso.")
-   </pre>
-   a.
-   <pre>
-   Isto é sempre impresso.
-   </pre>
-   b.
-   <pre>
-   O número negativo -10 não é válido aqui.
-   Isto é sempre impresso.
-   </pre>
-   c.
-   <pre>
-   O número negativo -10 não é válido aqui.
-   </pre>
+    O que o seguinte código imprime?
+
+    .. sourcecode:: python
+
+        x = -10
+        if x < 0:
+            print("O número negativo ",  x, " não é válido aqui.")
+        print("Isto é sempre impresso.")
+
+    Saída a
+
+        .. sourcecode:: python     
+
+            Isto é sempre impresso.
+
+    Saída b
+
+        .. sourcecode:: python
+
+            O número negativo -10 não é válido aqui.
+            Isto é sempre impresso.
+        
+    Saída c
+
+        .. sourcecode:: python
+
+            O número negativo -10 não é válido aqui.
+
+
+    - Saída a
+
+      - Porque -10 é menor do que 0, Python executará o corpo do comando if aqui.
+
+    - Saída b
+
+      + Python executa o corpo do bloco do if bem como o comando que segue o bloco do if.
+
+    - Saída c
+
+      - Python executará o comando que segue o bloco if (porque ele está no bloco do else, mas como um comando normal).
+
+    - Causará um erro porque todo if deve ter um else.
+
+      - É válido ter um bloco do if sem um bloco do else correspondente (embora você não possa ter um bloco do else sem um bloco do if correspondente).
+
+
 
 .. mchoice:: test_question6_5_2
-   :answer_a: Não
-   :answer_b: Sim
-   :correct: b
-   :feedback_a: Cada bloco de else precisa ter exatamente um bloco de if correspondente.  Se você quer encadear comandos if-else juntos, você precisa usar a construção else, descrita na seção 6.7.
-   :feedback_b: Isto causará um erro porque o segundo bloco de else não está relacionado com nenhum bloco de if.
 
-   O seguinte código causará um erro? 
-   <pre>
-   x = -10
-   if x < 0:
-       print("O número negativo ",  x, " não é válido aqui.")
-   else:
-       print(x, " é um número positivo.")
-   else:
-       print("Isto é sempre impresso.")
-   </pre>
+    O seguinte código causará um erro? 
+
+    .. sourcecode:: python
+
+        x = -10
+        if x < 0:
+            print("O número negativo ",  x, " não é válido aqui.")
+        else:
+            print(x, " é um número positivo.")
+        else:
+            print("Isto é sempre impresso.")
+
+
+    - Não
+    
+      - Cada bloco de else precisa ter exatamente um bloco de if correspondente.  Se você quer encadear comandos if-else juntos, você precisa usar a construção else, descrita na seção 6.7.
+    
+    - Sim
+    
+      + Isto causará um erro porque o segundo bloco de else não está relacionado com nenhum bloco de if.
+
 
 .. index::
     single: condicionais aninhados
@@ -565,23 +622,28 @@ Se você está ainda inseguro, aqui vai a mesma seleção do exemplo codelens.  
 **Teste seu entendimento**
 
 .. mchoice:: test_question6_6_1
-   :answer_a: Não
-   :answer_b: Sim
-   :correct: a
-   :feedback_a: Este é um comando if-else aninhado legítimo.  O comando if-else interno está completamente contido no corpo do bloco do else externo.
-   :feedback_b: Este é um comando if-else aninhado legítimo.  O comando if-else interno está completamente contido no corpo do bloco do else externo.
 
-   O seguinte código causará um erro? 
-   <pre>
-   x = -10
-   if x < 0:
-       print("O número negativo ",  x, " não é válido aqui.")
-   else:
-       if x > 0:
-           print(x, " é um número positivo.")
-       else:
-           print(x," é 0.")
-   </pre>
+    O seguinte código causará um erro? 
+
+    .. sourcecode:: python
+
+        x = -10
+        if x < 0:
+            print("O número negativo ",  x, " não é válido aqui.")
+        else:
+            if x > 0:
+                print(x, " é um número positivo.")
+            else:
+                print(x," é 0.")
+
+    - Não
+    
+      + Este é um comando if-else aninhado legítimo.  O comando if-else interno está completamente contido no corpo do bloco do else externo.
+    
+    - Sim
+   
+      - Este é um comando if-else aninhado legítimo.  O comando if-else interno está completamente contido no corpo do bloco do else externo.
+
 
 .. index::
     single: condicionais aninhados 
@@ -637,76 +699,99 @@ Aqui vai o mesmo programa usando ``elif``.
 **Teste seu entendimento**
 
 .. mchoice:: test_question6_7_1
-   :answer_a: I somente
-   :answer_b: II somente
-   :answer_c: III somente
-   :answer_d: II e III
-   :answer_e: I, II e III
-   :correct: b
-   :feedback_a: Você não pode usar uma expressão booleana depois de um else.
-   :feedback_b: Sim, II dará o mesmo resultado.
-   :feedback_c: Não, III não dará o mesmo resultado.  O primeiro comando if será verdadeiro, mas o segundo será falso, de forma que os comandos do bloco do else serão executados.
-   :feedback_d: Não, embora II seja correta, III não dará o mesmo resultado.  Teste isso.
-   :feedback_e: Não, em I você não pode ter uma expressão booleana depois de um else.
 
-   Quais dentre I, II e III abaixo dá o mesmo resultado que o seguinte if aninhado?
-   <pre>
-   # comando if-else aninhado
-   x = -10
-   if x < 0:
-       print("O número negativo ",  x, " não é válido aqui.")
-   else:
-       if x > 0:
-           print(x, " é um número positivo.")
-       else:
-           print(x, " é 0.")
-   </pre>
-   I.
-   <pre>
-   if x < 0:
-       print("O número negativo ",  x, " não é válido aqui.")
-   else (x > 0): 
-       print(x, " é um número positivo.")
-   else:
-       print(x, " é 0.")
-   </pre>
-   II.
-     <pre>
-   if x < 0:
-       print("O número negativo ",  x, " não é válido aqui.")
-   elif (x > 0): 
-       print(x, " é um número positivo.")
-   else:
-       print(x, " é 0.")
-   </pre>
-   III. 
-     <pre>
-   if x < 0:
-       print("O número negativo ",  x, " não é válido aqui.")
-   if (x > 0): 
-       print(x, " é um número positivo.")
-   else:
-       print(x, " é 0.")
-   </pre>
+    Quais dentre I, II e III abaixo dá o mesmo resultado que o seguinte if aninhado?
+
+    .. sourcecode:: python
+
+        # comando if-else aninhado
+        x = -10
+        if x < 0:
+            print("O número negativo ",  x, " não é válido aqui.")
+        else:
+            if x > 0:
+                print(x, " é um número positivo.")
+            else:
+                print(x, " é 0.")
+   
+    I.
+
+        .. sourcecode:: python
+
+            if x < 0:
+                print("O número negativo ",  x, " não é válido aqui.")
+            else (x > 0): 
+                print(x, " é um número positivo.")
+            else:
+                print(x, " é 0.")
+   
+    II.
+    
+        .. sourcecode:: python
+
+            if x < 0:
+                print("O número negativo ",  x, " não é válido aqui.")
+            elif (x > 0): 
+                print(x, " é um número positivo.")
+            else:
+                print(x, " é 0.")
+   
+    III.
+
+        .. sourcecode:: python 
+
+            if x < 0:
+                print("O número negativo ",  x, " não é válido aqui.")
+            if (x > 0): 
+                print(x, " é um número positivo.")
+            else:
+                print(x, " é 0.")
+
+    - I somente
+    
+      - Você não pode usar uma expressão booleana depois de um else.
+    
+    - II somente
+    
+      + Sim, II dará o mesmo resultado.
+    
+    - III somente
+    
+      - Não, III não dará o mesmo resultado.  O primeiro comando if será verdadeiro, mas o segundo será falso, de forma que os comandos do bloco do else serão executados.
+    
+    - II e III
+    
+      - Não, embora II seja correta, III não dará o mesmo resultado.  Teste isso.
+    
+    - I, II e III
+
+      - Não, em I você não pode ter uma expressão booleana depois de um else.
+
 
 .. mchoice:: test_question6_7_2
-   :answer_a: a
-   :answer_b: b
-   :answer_c: c
-   :correct: c
-   :feedback_a: Enquanto o valor de x é menor do que o valor de y (3 é menor do que 5) ele não é menor do que o valor de z (3 não é menor do que 2).
-   :feedback_b: O valor de y não é menor do que o valor de x (5 não é menor do que 3).  
-   :feedback_c: Como as duas primeiras expressões booleanas são falsas, o else será executado.   
 
-   O que o seguinte código imprimirá se x = 3, y = 5 e z = 2?
-   <pre>
-   if x < y and x < z:
-       print ("a")
-   elif y < x and y < z:
-       print ("b")
-   else:
-       print ("c")
-   </pre>
+    O que o seguinte código imprimirá se x = 3, y = 5 e z = 2?
+
+    .. sourcecode:: python
+
+        if x < y and x < z:
+            print ("a")
+        elif y < x and y < z:
+            print ("b")
+        else:
+            print ("c")
+
+    - a
+    
+      - Enquanto o valor de x é menor do que o valor de y (3 é menor do que 5) ele não é menor do que o valor de z (3 não é menor do que 2).
+    
+    - b
+    
+      - O valor de y não é menor do que o valor de x (5 não é menor do que 3).
+    
+    - c
+   
+      + Como as duas primeiras expressões booleanas são falsas, o else será executado. 
   
 
 Funções booleanas
@@ -715,7 +800,7 @@ Funções booleanas
 Funções podem retornar valores booleanos, o que é frequentemente conveniente para esconder dentro de 
 funções testes complidados. Por exemplo:
 
-.. activecode:: ch06_boolfun1
+.. activecode:: ch06_boolfun1_
     
     def eDivisivel(x, y):
         if x % y == 0:
@@ -807,16 +892,21 @@ Abaixo você encontra mesmo programa em codelens.
    O que é uma função booleana?
 
 .. mchoice:: test_question6_8_2
-   :answer_a: Sim
-   :answer_b: Não
-   :correct: a
-   :feedback_a: É perfeitamente válido retornar o resultado calculado por uma expressão booleana.
-   :feedback_b: x + y < z é uma expressão booleana válida, a qual terá valor True ou False.  É perfeitamente legal uma função retornar True ou False e ter uma expressão calculada na mesma linha do return.
 
-   O seguinte comando é legal em Python (assumindo que x, y e z são definidos como números)?
-   <pre>
-   return x + y < z
-   </pre>
+    O seguinte comando é legal em Python (assumindo que x, y e z são definidos como números)?
+
+    .. sourcecode:: python
+
+        return x + y < z
+
+    - Sim
+    
+      + É perfeitamente válido retornar o resultado calculado por uma expressão booleana.
+    
+    - Não
+   
+      - x + y < z é uma expressão booleana válida, a qual terá valor True ou False.  É perfeitamente legal uma função retornar True ou False e ter uma expressão calculada na mesma linha do return.
+
 
 
 

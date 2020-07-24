@@ -440,7 +440,7 @@ retornado da função.
 
 .. image:: Figures/caixapretafun.png    
 
-Como escrever funções futíferas? Vamos começar com uma função
+Como escrever funções frutíferas? Vamos começar com uma função
 matemática bem simples, a função ``quadrado``. A função quadrado terá
 um número como parâmetro e retornará o resultado desse número ao
 quadrado. Segue abaixo um diagrama do código Python seguinte.
@@ -624,7 +624,7 @@ resulta no erro: ``NameError: name 'y' is not defined.``
 A variável ``y`` existe somente enquanto a função está sendo executada
 --- chamamos isso de sua **duração**.
 Quando a execução da função termina (retorna), as variáveis locais são
-destruídas. Codelens ajuda você a visualisar isto porque as variáveis
+destruídas. Codelens ajuda você a visualizar isto porque as variáveis
 locais desaparecem depois que a função retorna.
 
 Parâmetros formais são também locais e funcionam como variáveis
@@ -1106,7 +1106,7 @@ termina.
 Qual a moral deste conto sórdido? Quando você lê um programa, não o
 leia de cima a baixo. Em vez disso, siga o fluxo de execução. Sob
 risco de soar repetitivo, isto quer dizer que você lerá as
-declaraçãoes def enquanto percorre o código de cima para baixo, mas
+declarações def enquanto percorre o código de cima para baixo, mas
 você deve pular o corpo da função até encontrar o ponto onde a função
 é chamada.
 
@@ -1114,7 +1114,7 @@ você deve pular o corpo da função até encontrar o ponto onde a função
     single: parâmetro
     single: função; parâmetro de
     single: argumento
-    single: funçao; argumento de
+    single: função; argumento de
     single: declaração import
     single: import; declaração
     single: composição
@@ -1262,11 +1262,11 @@ menores. Em particular, nosso pedaço é desenhar um barra. Nós, então,
 implementamos esse pedaço com uma função. Depois, para todo o
 diagrama, chamamos repetidamente nossa função.
 
-Em seguinda, acima de cada barra, imprimimos o valor do dado.
+Em seguida, acima de cada barra, imprimimos o valor do dado.
 Faremos isso no corpo do ``desenhaBarra``, adicionando ``t.write('  ' + str(altura))`` 
 como a terceira linha do corpo.
 Colocamos um pequeno espaço em frente do número, e transformamos o
-número em string. Sem esse expaço extra o texto poderia ficar grudado com a
+número em string. Sem esse espaço extra o texto poderia ficar grudado com a
 barra à esquerda.
 Finalmente, adicionamos os dois método necessários para preencher cada
 barra.
@@ -1347,7 +1347,7 @@ Glossário
 
     chamada de função
         Um comando que executa uma função. Ele consiste do nome da
-	função seguido por uma lista de argumentos entre parentêses.
+	função seguido por uma lista de argumentos entre parênteses.
 
     comando composto
         Um comando que consiste de duas partes:

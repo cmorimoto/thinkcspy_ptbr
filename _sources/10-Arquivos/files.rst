@@ -308,7 +308,7 @@ Para processar todos os dados sobre os *quarterbacks*, usamos o laço
 *for* para iterar sobre as linhas do arquivo. Usando o método ``split``
 podemos quebrar cada linha em uma lista contendo todos os campos de interesse
 sobre o *quarterback. Podemos pegar os valores correspondente ao 
-*first name*, *last name* e examinar as avaliações para contruir 
+*first name*, *last name* e examinar as avaliações para construir 
 uma sentença simples como mostrada em :ref:`Listing 1 <readingfile1>`.
 
 
@@ -504,7 +504,7 @@ Glossário
        Devemos também abrir um arquivo antes de escrever nele: ``ref_arquivo = open(nome_arquivo,"w")``.
 
    close
-      devemos fechar (*close*) um aqruivo depois que acabamos de manipulá-lo: ``ref_arquivo.close()``.
+      devemos fechar (*close*) um arquivo depois que acabamos de manipulá-lo: ``ref_arquivo.close()``.
 
     
    read

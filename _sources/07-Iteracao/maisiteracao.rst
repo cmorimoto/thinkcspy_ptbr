@@ -317,25 +317,34 @@ precisamos do poder extra que nós temos usando o ``while``.
    Verdadeiro ou Falso: você pode reescrever qualquer ``for`` na forma de um ``while``.
    
 .. mchoice:: test_question7_2_2
-   :answer_a: n começa com 10 e é incrementado de 1 a cada iteração do laço, de forma que ele é sempre positivo.
-   :answer_b: ``resposta`` começa em 1 e é incrementado de n a cada iteração, de forma que ele é sempre positivo
-   :answer_c: Você não pode comparar n com zero em um ``while``. Você precisa comparar n com uma outra variável.
-   :answer_d: No corpo de um ``while``, nós devemos tornar n ``False`` e esse código não faz isso.
-   :correct: a
-   :feedback_a: O laço será executado enquanto n for positivo. Nesse caso, podemos ver que n nunca se tornará não-positivo.
-   :feedback_b: Apesar de ser verdade que ``resposta`` é sempre positivo, essa variável não é usada na condição de controle do laço.
-   :feedback_c: É perfeitamente válido comparar n com zero. Embora indiretamente, isso é o que causa o laço infinito.
-   :feedback_d: A condição do laço deve se tornar falsa para que o laço termine, mas n, por si só, não é a condição nesse caso.
 
-   O seguinte pedaço de código contém um laço infinito. Qual é a melhor explicação para o motivo desse laço não terminar?
-     <pre>
-     n = 10
-     resposta = 1
-     while ( n > 0 ):
-       resposta = resposta + n
-       n = n + 1
-     print resposta
-     </pre>
+    O seguinte pedaço de código contém um laço infinito. Qual é a melhor explicação para o motivo desse laço não terminar?
+    
+    .. sourcecode:: python
+
+        n = 10
+        resposta = 1
+        while ( n > 0 ):
+            resposta = resposta + n
+            n = n + 1
+        print resposta     
+
+    - n começa com 10 e é incrementado de 1 a cada iteração do laço, de forma que ele é sempre positivo.
+    
+      + O laço será executado enquanto n for positivo. Nesse caso, podemos ver que n nunca se tornará não-positivo.
+    
+    - ``resposta`` começa em 1 e é incrementado de n a cada iteração, de forma que ele é sempre positivo.
+    
+      - Apesar de ser verdade que ``resposta`` é sempre positivo, essa variável não é usada na condição de controle do laço.
+    
+    - Você não pode comparar n com zero em um ``while``. Você precisa comparar n com uma outra variável.
+    
+      - É perfeitamente válido comparar n com zero. Embora indiretamente, isso é o que causa o laço infinito.
+    
+    - No corpo de um ``while``, nós devemos tornar n ``False`` e esse código não faz isso.
+   
+      - A condição do laço deve se tornar falsa para que o laço termine, mas n, por si só, não é a condição nesse caso.
+   
 
 Caminhadas Aleatórias de Tartarugas
 -----------------------------------
@@ -1414,80 +1423,107 @@ estudar as principais estruturas de dados fornecidas pelo Python.
 **Teste seu entendimento**
 
 .. mchoice:: test_question7_8_3_1
-   :answer_a: Saída a
-   :answer_b: Saída b
-   :answer_c: Saída c
-   :answer_d: Saída d
-   :correct: a
-   :feedback_a: i começa com o valor 0 e então j itera de 0 a 1. Em seguida, i recebe 1 e j itera de 0 a 1. Finalmente, i recebe 2 e j itera de 0 a 1.
-   :feedback_b: O laço for interno controla o segundo dígito (j). O laço for deve ser concluído antes que o laço externo possa avançar.
-   :feedback_c: O laço for interno controla o segundo dígito (j). Note que o laço for interno percorre a lista [0, 1].
-   :feedback_d: O laço for externo itera 3 vezes (0, 1, 2) e o laço interno roda duas vezes para cada iteração do laço externo. Então esse programa imprime 6 linhas exatamente. 
-  
-   O que a seguinte iteração encaixada vai imprimir? (Nota: se você estiver com dificuldade nessa questão, reveja CodeLens 3).
-    <pre>
-    for i in range(3):
-      for j in range(2):
-        print(i,j)  
-    </pre>
+
+    O que a seguinte iteração encaixada vai imprimir? (Nota: se você estiver com dificuldade nessa questão, reveja CodeLens 3).
+
+    .. sourcecode:: python
+    
+        for i in range(3):
+            for j in range(2):
+                print(i,j)  
+    
     a.
-    <pre>
-    0	0
-    0	1
-    1	0
-    1	1
-    2	0
-    2	1
-    </pre>
+    
+        .. sourcecode:: python
+
+            0	0
+            0	1
+            1	0
+            1	1
+            2	0
+            2	1
+    
     b.
-    <pre>
-    0   0
-    1   0
-    2   0
-    0   1
-    1   1
-    2   1
-    </pre>
+    
+        .. sourcecode:: python
+
+            0   0
+            1   0
+            2   0
+            0   1
+            1   1
+            2   1
+
     c. 
-    <pre>
-    0   0
-    0   1 
-    0   2
-    1   0 
-    1   1
-    1   2
-    </pre>
+
+        .. sourcecode:: python
+
+            0   0
+            0   1 
+            0   2
+            1   0 
+            1   1
+            1   2
+
     d.
-    <pre>
-    0   1
-    0   1
-    0   1 
-    </pre>
+
+        .. sourcecode:: python
+
+            0   1
+            0   1
+            0   1 
+
+    - Saída a
+    
+      + i começa com o valor 0 e então j itera de 0 a 1. Em seguida, i recebe 1 e j itera de 0 a 1. Finalmente, i recebe 2 e j itera de 0 a 1.
+    
+    - Saída b
+    
+      - O laço for interno controla o segundo dígito (j). O laço for deve ser concluído antes que o laço externo possa avançar.
+
+    - Saída c
+    
+      - O laço for interno controla o segundo dígito (j). Note que o laço for interno percorre a lista [0, 1].
+    
+    - Saída d
+
+      -  O laço for externo itera 3 vezes (0, 1, 2) e o laço interno roda duas vezes para cada iteração do laço externo. Então esse programa imprime 6 linhas exatamente.   
+
 
 
 .. mchoice:: test_question7_8_3_2
-   :answer_a: Seria uma versão avermelhada da imagem do sino.
-   :answer_b: Seria um retângulo vermelho sólido de mesmo tamanho da imagem original
-   :answer_c: Seria a mesma imagem originalimage
-   :answer_d: Seria a mesma que a imagem negativa 
-   :correct: a
-   :feedback_a: Como estamos removendo os componentes verde e azul, mas mantendo as variações do componente vermelho, obteríamos a mesma imagem, mas avermelhada.
-   :feedback_b: Como o valor de vermelho varia de pixel para pixel, a imagem não seria um vermelho sólido. Para ser sólido, todos os pixels deveriam receber o mesmo valor de vermelho.
-   :feedback_c: Ao remover o azul e o verde dos pixels, a imagem ficará diferente, mesmo que a imagem original não aparente ter cores verde e azul (lembre-se que outras cores são formadas pela combinação de vermelho, verde e azul).
-   :feedback_d: Como nós mudamos os valores dos pixels de forma diferente do código anterior, a imagem resultante não será igual a imagem negativa.
-  
-   Qual seria a imagem produzida pelo programa da caixa 12 do ActiveCode ao substituir as linhas:
-   <pre>
-   newred = 255-p.getRed()
-   newgreen = 255-p.getGreen()
-   newblue = 255-p.getBlue()
-   </pre>
-   pelas linhas:
-   <pre>
-   newred = p.getRed()
-   newgreen = 0
-   newblue = 0
-   </pre>
+
+    Qual seria a imagem produzida pelo programa da caixa 12 do ActiveCode ao substituir as linhas:
+
+    .. sourcecode:: python
+
+        newred = 255-p.getRed()
+        newgreen = 255-p.getGreen()
+        newblue = 255-p.getBlue()
+
+    pelas linhas:
+    
+    .. sourcecode:: python
+
+        newred = p.getRed()
+        newgreen = 0
+        newblue = 0
+
+    - Seria uma versão avermelhada da imagem do sino.
+    
+      + Como estamos removendo os componentes verde e azul, mas mantendo as variações do componente vermelho, obteríamos a mesma imagem, mas avermelhada.
+    
+    - Seria um retângulo vermelho sólido de mesmo tamanho da imagem original.
+    
+      - Como o valor de vermelho varia de pixel para pixel, a imagem não seria um vermelho sólido. Para ser sólido, todos os pixels deveriam receber o mesmo valor de vermelho.
+    
+    - Seria a mesma imagem originalimage.
+    
+      - Ao remover o azul e o verde dos pixels, a imagem ficará diferente, mesmo que a imagem original não aparente ter cores verde e azul (lembre-se que outras cores são formadas pela combinação de vermelho, verde e azul).
+    
+    - Seria a mesma que a imagem negativa. 
+
+      - Como nós mudamos os valores dos pixels de forma diferente do código anterior, a imagem resultante não será igual a imagem negativa.
 
 
 

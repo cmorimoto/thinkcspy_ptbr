@@ -976,6 +976,7 @@ Glossário
 
 Exercícios
 ----------
+
 #. Escreva um programa que escreve ``Eu gosto das tartarugas do Python!`` 1000 vezes.
 
    .. actex:: ex_3_1

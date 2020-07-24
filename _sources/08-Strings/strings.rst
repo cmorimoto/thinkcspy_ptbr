@@ -172,45 +172,58 @@ feita primeiro, você vai precisar usar parênteses.
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_1_1 
-   :answer_a: python rocks
-   :answer_b: python
-   :answer_c: pythonrocks
-   :answer_d: Error, you cannot add two strings together.
-   :correct: c
-   :feedback_a: A concatenação não adiciona espaços.
-   :feedback_b: A expressão s+t é calculada primero, então o resultado é impresso
-   :feedback_c: Sim, os dois strings são unidos.
-   :feedback_d: O operador + tem significado diferente dependendo de seus operandos, nesse caso, dois strings.
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python"
-   t = "rocks"
-   print(s+t)
+    O que é impresso pelos seguintes comandos?
 
-   </pre>
+    .. sourcecode:: python
+
+        s = "python"
+        t = "rocks"
+        print(s+t)
+
+    - python rocks
+    
+      - A concatenação não adiciona espaços.
+    
+    - python
+    
+      - A expressão s+t é calculada primeiro, então o resultado é impresso
+    
+    - pythonrocks
+    
+      + Sim, os dois strings são unidos.
+    
+    - Erro, você não pode somar duas strings.
+   
+      - O operador + tem significado diferente dependendo de seus operandos, nesse caso, dois strings.
+   
 
 
 .. mchoice:: test_question8_1_2
-   :answer_a: python!!!
-   :answer_b: python!python!python!
-   :answer_c: pythonpythonpython!
-   :answer_d: Error, you cannot perform concatenation and repetition at the same time.
-   :correct: a
-   :feedback_a: Sim, repetição tem precedência sobre concatenação.
-   :feedback_b: Repetição é feita primeiro.
-   :feedback_c: O operador de repetição está trabalhando sobre a variável excl.
-   :feedback_d: Os operadores + e * são definidos tanto para strings quanto para números.
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python"
-   excl = "!"
-   print(s+excl*3)
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
 
-   </pre>
+        s = "python"
+        excl = "!"
+        print(s+excl*3)
 
-
+    - python!!!
+    
+      + Sim, repetição tem precedência sobre concatenação.
+    
+    - python!python!python!
+    
+      - Repetição é feita primeiro.
+    
+    - pythonpythonpython!
+    
+      - O operador de repetição está trabalhando sobre a variável excl.
+    
+    - Erro, você não pode fazer concatenação e repetição ao mesmo tempo.
+    
+      - Os operadores + e * são definidos tanto para strings quanto para números.
 
 
 .. Index Operator: Working with the Characters of a String
@@ -288,43 +301,56 @@ Observe que a indexação retorna um *string* --- o Python não tem nenhum tipo 
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_2_1
-   :answer_a: t
-   :answer_b: h
-   :answer_c: c
-   :answer_d: Error, you cannot use the [ ] operator with a string.
-   :correct: b
-   :feedback_a: Os índices não começam de 1, eles começam de 0.
-   :feedback_b: Sim, os índices começam de 0.
-   :feedback_c: s[-3] retorna c, contando da direita para a esquerda.
-   :feedback_d: [ ] é o operador de índice.
+    
+    O que é impresso pelos seguintes comandos?
 
+    .. sourcecode:: python
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(s[3])
+        s = "python rocks"
+        print(s[3])
 
-   </pre>
+    - t
 
+      - Os índices não começam de 1, eles começam de 0.
+
+    - h
+
+      + Sim, os índices começam de 0.
+
+    - c
+
+      - s[-3] retorna c, contando da direita para a esquerda.
+
+    - Erro, você não pode usar o operador [ ] com um string.
+    
+      - [ ] é o operador de índice.
+    
 
 .. mchoice:: test_question8_2_2
-   :answer_a: tr
-   :answer_b: ps
-   :answer_c: nn
-   :answer_d: Error, you cannot use the [ ] operator with the + operator.
-   :correct: a
-   :feedback_a: Sim, o operador de indexação tem precedência sobre concatenação.
-   :feedback_b: p está na posição 0, não 2.
-   :feedback_c: n está na posição 5, não 2.
-   :feedback_d: o operador [ ] retorna um string que pode ser concatenado com outro string.
 
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(s[2] + s[-5])
+        s = "python rocks"
+        print(s[2] + s[-5])
 
-   </pre>
+    - tr
+    
+      + Sim, o operador de indexação tem precedência sobre concatenação.
+    
+    - ps
+    
+      -  p está na posição 0, não 2.
+    
+    - nn
+    
+      - n está na posição 5, não 2.
+    
+    - Erro, você não pode usar o operador [ ] com o operador +.
+    
+      - o operador [ ] retorna um string que pode ser concatenado com outro string.
+
 
 
 
@@ -473,41 +499,51 @@ Você deve experimentar esses métodos para que você entenda o que eles fazem. 
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_3_1
-   :answer_a: 0
-   :answer_b: 2
-   :answer_c: 3
-   :correct: c
-   :feedback_a: Com certeza temos alguns caracteres o e p.
-   :feedback_b: Há 2 characteres o mas quantos são p?
-   :feedback_c: Sim, some o número de caracteres o com o número de caracteres p.
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(s.count("o") + s.count("p"))
+    O que é impresso pelos seguintes comandos?
 
-   </pre>
+    .. sourcecode:: python
 
+        s = "python rocks"
+        print(s.count("o") + s.count("p"))
 
+    - 0
+    
+      - Com certeza temos alguns caracteres o e p.
+    
+    - 2
+    
+      - Há 2 caracteres o mas quantos são p?
+    
+    - 3
+    
+      + Sim, some o número de caracteres o com o número de caracteres p.
+    
 
 .. mchoice:: test_question8_3_2
-   :answer_a: yyyyy
-   :answer_b: 55555
-   :answer_c: n
-   :answer_d: Error, you cannot combine all those things together.
-   :correct: a
-   :feedback_a: Sim, s[1] é y e o índice de n é 5, portanto 5 caracteres y.
-   :feedback_b: Quase. 5 não é repetido, é o número de vezes a serem repetidas.
-   :feedback_c: Essa expressão usa o índice de n.
-   :feedback_d: Não há erro, o operador de repetição * usou o resultado de indexação e o método index.
 
+    O que é impresso pelos seguintes comandos?
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(s[1]*s.index("n"))
+    .. sourcecode:: python
 
-   </pre>
+        s = "python rocks"
+        print(s[1]*s.index("n"))
+
+    - yyyyy
+    
+      + Sim, s[1] é y e o índice de n é 5, portanto 5 caracteres y.
+    
+    - 55555
+    
+      -  Quase. 5 não é repetido, é o número de vezes a serem repetidas.
+    
+    - n
+    
+      - Essa expressão usa o índice de n.
+    
+    - Error, you cannot combine all those things together.
+    
+      - Não há erro, o operador de repetição * usou o resultado de indexação e o método index.
 
 
 .. index::
@@ -581,41 +617,48 @@ combinando as duas linhas de código acima.
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_4_1
-   :answer_a: 11
-   :answer_b: 12
-   :correct: b
-   :feedback_a: O espaço em branco conta como um caractere.
-   :feedback_b: Sim, há 12 caracteres no string.
 
+    O que é impresso pelos seguintes comandos?
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(len(s))
+    .. sourcecode:: python
 
-   </pre>
+        s = "python rocks"
+        print(len(s))
 
+    - 11
+    
+      - O espaço em branco conta como um caractere.
+    
+    - 12
+    
+      + Sim, há 12 caracteres no string.
 
 
 .. mchoice:: test_question8_4_2
-   :answer_a: o
-   :answer_b: r
-   :answer_c: s
-   :answer_d: Error, len(s) is 12 and there is no index 12.
-   :correct: b
-   :feedback_a: Dê uma nova olhada no cálculo do índice, len(s)-5
-   :feedback_b: Sim, len(s) é 12 e 12-5 é 7. Use 7 como índice e lembre-se de começar a contar do 0.
-   :feedback_c: O s está no índice 11.
-   :feedback_d: Você deve subtrair 5 antes de usar o operador índice.
 
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(s[len(s)-5])
+        s = "python rocks"
+        print(s[len(s)-5])
 
-   </pre>
+    - o
+    
+      - Dê uma nova olhada no cálculo do índice, len(s)-5
+    
+    - r
+    
+      + Sim, len(s) é 12 e 12-5 é 7. Use 7 como índice e lembre-se de começar a contar do 0.
+    
+    - s
+    
+      - O s está no índice 11.
+    
+    - Erro, len(s) é 12 e o índice 12 não existe.
 
+      - Você deve subtrair 5 antes de usar o operador índice.
+   
 
 
 .. The Slice Operator
@@ -647,7 +690,7 @@ Um substring de um string é chamado de **fatia** (do inglês slice). Selecionar
    the beginning of the string. If you omit the second index, the
    slice goes to the end of the string.
 
-O operador de `fatia` ``[n:m]`` retorna a parte do string a partir do n-ésimo caractere até o m-ésimo caractere, incluindo o primeiro mas excluindo o último. Em outras palavras, comece com o caractere no índice n e vá até, mas não inclua, o caractere no índice m. Esse comportamento pode parecer contra-intuitivo, mas se você se lembra a função ``range``, ela não inclue o seu ponto final também.
+O operador de `fatia` ``[n:m]`` retorna a parte do string a partir do n-ésimo caractere até o m-ésimo caractere, incluindo o primeiro mas excluindo o último. Em outras palavras, comece com o caractere no índice n e vá até, mas não inclua, o caractere no índice m. Esse comportamento pode parecer contra-intuitivo, mas se você se lembra a função ``range``, ela não inclui o seu ponto final também.
 
 Se você omitir o primeiro índice (antes dos dois pontos), a fatia começa no início da cadeia. Se você omitir o segundo índice, a fatia vai até o fim da cadeia.
 
@@ -664,42 +707,57 @@ O que você acha que ``fruta[:]`` significa?
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_5_1
-   :answer_a: python
-   :answer_b: rocks
-   :answer_c: hon r
-   :answer_d: Error, you cannot have two numbers inside the [ ].
-   :correct: c
-   :feedback_a: Isso seria s[0:6].
-   :feedback_b: Isso seria s[7:].
-   :feedback_c: Sim, comece com o caractere no índice 3 e vá até, mas sem incluir, o caractere de índice 8.
-   :feedback_d: Isso é chamado de fatiamento, não indexação. O fatiamento requer um início e um fim.
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(s[3:8])
+    O que é impresso pelos seguintes comandos?
+    
+    .. sourcecode:: python
 
-   </pre>
+        s = "python rocks"
+        print(s[3:8])
 
+    - python
+    
+      - Isso seria s[0:6].
+    
+    - rocks
+    
+      - Isso seria s[7:].
+    
+    - hon r
+    
+      + Sim, comece com o caractere no índice 3 e vá até, mas sem incluir, o caractere de índice 8.
+    
+    - Erro, você não pode ter dois números dentro do [ ].
+
+      - Isso é chamado de fatiamento, não indexação. O fatiamento requer um início e um fim.
+   
 
 
 .. mchoice:: test_question8_5_2
-   :answer_a: rockrockrock
-   :answer_b: rock rock rock
-   :answer_c: rocksrocksrocks
-   :answer_d: Error, you cannot use repetition with slicing.
-   :correct: a
-   :feedback_a: Sim, rock começa em 7 e vai até 10. Repita 3 vezes.
-   :feedback_b: Repetição não insere um espaço.
-   :feedback_c: Fatiamento não inclui o caractere de índice 11, apenas até o caractere anterior (10 nesse caso). 
-   :feedback_d: O fatiamento ocorre primeiro e depois a repetição. Assim não há erro.
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   print(s[7:11]*3)
+    O que é impresso pelos seguintes comandos?
 
-   </pre>
+    .. sourcecode:: python
+
+        s = "python rocks"
+        print(s[7:11]*3)
+
+
+    - rockrockrock
+    
+      + Sim, rock começa em 7 e vai até 10. Repita 3 vezes.
+    
+    - rock rock rock
+    
+      - Repetição não insere um espaço.
+    
+    - rocksrocksrocks
+    
+      - Fatiamento não inclui o caractere de índice 11, apenas até o caractere anterior (10 nesse caso). 
+    
+    - Erro, você não pode usar repetição com fatiamento.
+    
+      - O fatiamento ocorre primeiro e depois a repetição. Assim não há erro.
 
 
    
@@ -838,50 +896,58 @@ o veja, ele é um caractere real.
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_6_1
-   :answer_a: True
-   :answer_b: False
-   :correct: a
-   :feedback_a: Ambos os strings são idênticos até o l mas como mel é mais curto que melhor então ele vem primeiro no dicionário.
-   :feedback_b: Strings são comparados caractere a caractere.
+
+    Qual o resultado da seguinte comparação:
    
-   Qual o resultado da seguinte comparação:
-   <pre>
-   "mel" < "melhor"
+    .. sourcecode:: python
 
-   </pre>
+        "mel" < "melhor"
 
+    - True
+    
+      + Ambos os strings são idênticos até o l mas como mel é mais curto que melhor então ele vem primeiro no dicionário.
+    
+    - False
+    
+      - Strings são comparados caractere a caractere.
    
    
 .. mchoice:: test_question8_6_2
-   :answer_a: True
-   :answer_b: False
-   :answer_c: Eles são a mesma palavra
-   :correct: b
-   :feedback_a: m é maior que M de acordo com a função ord (77 versus 109).
-   :feedback_b: Sim, um caractere maiúsculo é menor que seu correspondente minúsculo de acordo com os seus valores ordinais.
-   :feedback_c: Em Python, letras maiúsculas e minúsculas são diferentes.
-   
-   Qual o resultado da seguinte comparação:
-   <pre>
-   "mel" < "Mel"
 
-   </pre>
-
+    Qual o resultado da seguinte comparação:
    
+    .. sourcecode:: python
+
+        "mel" < "Mel"
+
+    - True
+    
+      - m é maior que M de acordo com a função ord (77 versus 109).
+    
+    - False
+    
+      + Sim, um caractere maiúsculo é menor que seu correspondente minúsculo de acordo com os seus valores ordinais.
+    
+    - Eles são a mesma palavra
+    
+      - Em Python, letras maiúsculas e minúsculas são diferentes.
+     
 
 .. mchoice:: test_question8_6_3
-   :answer_a: True
-   :answer_b: False
-   :correct: b
-   :feedback_a: m é maior que M.
-   :feedback_b: O comprimento não é importante.
 
-   Qual o resultado da seguinte comparação:
-   <pre>
-   "mel" < "Melhor"
+    Qual o resultado da seguinte comparação:
 
-   </pre>
+    .. sourcecode:: python
+        
+        "mel" < "Melhor"
 
+    - True
+    
+      - m é maior que M.
+    
+    - False
+
+      + O comprimento não é importante.
    
 
 .. mutable, immutable, runtime error
@@ -926,22 +992,26 @@ A solução aqui é concatenar uma nova primeira letra com uma fatia de ``conver
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_7_1
-   :answer_a: Ball
-   :answer_b: Call
-   :answer_c: Error
-   :correct: c
-   :feedback_a: Atribuição não é permitida com strings.
-   :feedback_b: Atribuição não é permitida com strings. 
-   :feedback_c: Sim, strings são imutáveis.
 
-   O que é impresso pelos seguintes comandos?
-   <pre>
-   s = "Ball"
-   s[0] = "C"
-   print(s)
+    O que é impresso pelos seguintes comandos?
 
-   </pre>
+    .. sourcecode:: python
 
+        s = "Ball"
+        s[0] = "C"
+        print(s)
+
+    - Ball
+    
+      - Atribuição não é permitida com strings.
+    
+    - Call
+    
+      - Atribuição não é permitida com strings. 
+    
+    - Error
+    
+      + Sim, strings são imutáveis.
 
 
 .. traversal, for loop, concatenation, abecedarian series
@@ -1025,44 +1095,58 @@ direita.
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_8_1
-   :answer_a: 11
-   :answer_b: 12
-   :answer_c: 13
-   :answer_d: Erro, o comando for precisa ser usado com a função range.
-   :correct: c
-   :feedback_a: Iteração por item processará cada item da sequência uma vez.
-   :feedback_b: Os espaços fazem parte da sequência.
-   :feedback_c: Sim, há 13 caracteres, incluindo os espaços.
-   :feedback_d: O comando for pode iterar sobre uma sequência item por item.
 
-   Quantas vezes a palavra OLA é impressa pelos seguintes comandos?
-   <pre>
-   s = "viva o python"
-   for ch in s:
-      print("OLA")
+    Quantas vezes a palavra OLA é impressa pelos seguintes comandos?
 
-   </pre>
+    .. sourcecode:: python
+    
+        s = "viva o python"
+        for ch in s:
+            print("OLA")
 
+    - 11
+    
+      - Iteração por item processará cada item da sequência uma vez.
+    
+    - 12
+    
+      - Os espaços fazem parte da sequência.
+    
+    - 13
+    
+      + Sim, há 13 caracteres, incluindo os espaços.
+    
+    - Erro, o comando for precisa ser usado com a função range.
+    
+      - O comando for pode iterar sobre uma sequência item por item.
 
    
 .. mchoice:: test_question8_8_2
-   :answer_a: 4
-   :answer_b: 5
-   :answer_c: 6
-   :answer_d: Erro, o comando for não pode usar fatias.
-   :correct: b
-   :feedback_a: A fatia retorna uma sequência que pode ser percorrida. Os espaços fazem parte da sequência.
-   :feedback_b: Sim, os espaços fazem parte da sequência retornada pela fatia.
-   :feedback_c: Verifique o resultado de s[3:8]. Ele não inclui o item de índice 8.
-   :feedback_d: A fatia s[3:8] retorna uma sequência.
 
-   Quantas vezes a palavra OLA é impressa pelos seguintes comandos?
-   <pre>
-   s = "viva o python"
-   for ch in s[3:8]:
-      print("OLA")
+    Quantas vezes a palavra OLA é impressa pelos seguintes comandos?
 
-   </pre>
+    .. sourcecode:: python
+
+        s = "viva o python"
+        for ch in s[3:8]:
+            print("OLA")
+
+    - 4
+    
+      - A fatia retorna uma sequência que pode ser percorrida. Os espaços fazem parte da sequência.
+    
+    - 5
+    
+      + Sim, os espaços fazem parte da sequência retornada pela fatia.
+    
+    - 6
+    
+      - Verifique o resultado de s[3:8]. Ele não inclui o item de índice 8.
+    
+    - Erro, o comando for não pode usar fatias.
+    
+      - A fatia s[3:8] retorna uma sequência.
+
 
 
 .. Traversal and the ``for`` Loop: By Index
@@ -1124,25 +1208,31 @@ Simule os valores de ``idx`` e verifique que eles estão corretos. Em particular
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_9_1
-   :answer_a: 0
-   :answer_b: 1
-   :answer_c: 2
-   :answer_d: Erro, o comando for não pode conter um comando if.
-   :correct: c
-   :feedback_a: O laço for visita todos os índices mas a seleção somente imprime alguns.
-   :feedback_b: o está nas posições 4 e 8.
-   :feedback_c: Sim, todos os caracteres nas posições pares serão impressos.
-   :feedback_d: O comando for pode conter qualquer outro comando, incluindo if e outros comandos for. 
 
-   Quantas vezes a letra o é impressa pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   for idx in range(len(s)):
-      if idx % 2 == 0:
-         print(s[idx])
+    Quantas vezes a letra o é impressa pelos seguintes comandos?
+    
+    .. sourcecode:: python
 
-   </pre>
+        s = "python rocks"
+        for idx in range(len(s)):
+            if idx % 2 == 0:
+                print(s[idx])
 
+    - 0
+    
+      - O laço for visita todos os índices mas a seleção somente imprime alguns.
+    
+    - 1
+    
+      - o está nas posições 4 e 8.
+    
+    - 2
+    
+      + Sim, todos os caracteres nas posições pares serão impressos.
+    
+    - Erro, o comando for não pode conter um comando if.
+    
+      - O comando for pode conter qualquer outro comando, incluindo if e outros comandos for. 
 
 
 .. Traversal and the ``while`` Loop
@@ -1203,23 +1293,28 @@ valores das variáveis.
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_10_1
-   :answer_a: 0
-   :answer_b: 1
-   :answer_c: 2
-   :correct: a
-   :feedback_a: Sim, idx varre os números ímpares a partir do 1 e a letra o está nas posições 4 e 8.
-   :feedback_b: a letra o está nas posições 4 e 8, e o idx começa em 1, não 0.
-   :feedback_c: Há duas letras o mas idx não recebe os valores de índice corretos.
 
-   Quantas vezes a letra o é impressa pelos seguintes comandos?
-   <pre>
-   s = "python rocks"
-   idx = 1
-   while idx < len(s):
-      print(s[idx])
-      idx = idx + 2
+    Quantas vezes a letra o é impressa pelos seguintes comandos?
+    
+    .. sourcecode:: python
+   
+        s = "python rocks"
+        idx = 1
+        while idx < len(s):
+            print(s[idx])
+            idx = idx + 2
 
-   </pre>
+    - 0
+    
+      + Sim, idx varre os números ímpares a partir do 1 e a letra o está nas posições 4 e 8.
+    
+    - 1
+    
+      - a letra o está nas posições 4 e 8, e o idx começa em 1, não 0.
+    
+    - 2
+
+      - Há duas letras o mas idx não recebe os valores de índice corretos.
 
 
 .. index::
@@ -1376,23 +1471,28 @@ acumuladora crescer.
 **Teste seu entendimento**
 
 .. mchoice:: test_question8_11_1
-   :answer_a: Ball
-   :answer_b: BALL
-   :answer_c: LLAB
-   :correct: c
-   :feedback_a: Cada item é convertido para maiúscula antes da concatenação.
-   :feedback_b: Cada caractere é convertido para maiúscula mas a ordem está errada.
-   :feedback_c: Sim, a ordem é reversa devido a ordem da concatenação.
 
-   O que é impresso pelos seguintes comandos:
-   <pre>
-   s = "ball"
-   r = ""
-   for item in s:
-      r = item.upper() + r
-   print(r)
+    O que é impresso pelos seguintes comandos:
+    
+    .. sourcecode:: python
 
-   </pre>
+        s = "ball"
+        r = ""
+        for item in s:
+            r = item.upper() + r
+        print(r)
+
+    - Ball
+    
+      - Cada item é convertido para maiúscula antes da concatenação.
+    
+    - BALL
+    
+      - Cada caractere é convertido para maiúscula mas a ordem está errada.
+    
+    - LLAB
+    
+      + Sim, a ordem é reversa devido a ordem da concatenação.
 
 
 .. Turtles and Strings and L-Systems

@@ -185,7 +185,7 @@ Função Booleana
 
 Funções booleanas retornam valores booleanos que são muito convenientes para esconder testes complicados dentro de funções. Por exemplo:
 
-.. activecode:: ch06_boolfun1
+.. activecode:: ch06_boolfun1_mais
     
     def eDivisivel(x, y):
         if x % y == 0:
@@ -223,7 +223,7 @@ Pode ser tentador escrever algo como:
 
 mas a comparação não é necessária.
 
-.. activecode:: ch06_boolfun2
+.. activecode:: ch06_boolfun2_mais
     
     def eDivisivel(x, y):
         if x % y == 0:
@@ -244,7 +244,7 @@ Teste usando alguns outros pares de valores para ver os resultados.
 Programando Com Estilo
 ----------------------
 
-É muito importante deixar o programa fácil de ler pois, na prática, programas são lidos e modificados com muito mais frequencia com que são escritos.
+É muito importante deixar o programa fácil de ler pois, na prática, programas são lidos e modificados com muito mais frequência com que são escritos.
 
 
 .. Todos os exemplos de código

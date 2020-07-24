@@ -13,7 +13,7 @@ Visualizando recursão
 =====================
 
 
-Na seção anterio vimos alguns problemas que eram fáceis de resolver usando recursão; no entanto, pode ainda ser difícil encontrar um modelo mental ou uma maneira de visualizar o que está acontecendo em uma função recursiva. Isso pode fazer a recursividade difícil para as pessoas compreenderem. Neste
+Na seção anterior vimos alguns problemas que eram fáceis de resolver usando recursão; no entanto, pode ainda ser difícil encontrar um modelo mental ou uma maneira de visualizar o que está acontecendo em uma função recursiva. Isso pode fazer a recursividade difícil para as pessoas compreenderem. Neste
 seção, vamos ver alguns exemplos de uso de recursão para desenhar
 algumas figuras interessantes. À medida que você vê essas figuras se formando você vai ganhar uma nova visão sobre o processo recursivo que pode ser útil para cimentar a sua compreensão sobre recursão.
 

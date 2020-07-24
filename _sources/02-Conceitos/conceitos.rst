@@ -904,7 +904,7 @@ usados para computar os valores corretos.
 Input
 -----
 
-.. video:: inputvid
+.. video:: inputvid_cap02
     :controls:
     :thumb: ../_static/inputthumb.png
 
@@ -1070,11 +1070,11 @@ operadores matemáticos da mesma forma que matemática.
    mais altas que adição e subtração, que também têm a mesma
    precedência. Logo, ``2*3-1``é 5 e não 4, e ``5-2*2`` é 1 e não 6.
 #. Operadores com a *mesma* precedência são executados  da esquerda
-   para a direira. Em álgebra dizemos que eles são *associativos à
+   para a direita. Em álgebra dizemos que eles são *associativos à
    esquerda* (*left-associative*). Desta forma na expressão ``6-3+3``
    a subtração é realizada primeiro e tem como resultado 3.
    Depois adicionamos 2 e obtemos o resultado 5. Se os operadores
-   tivessem sido executados da direira para a esquerda o resultado
+   tivessem sido executados da direita para a esquerda o resultado
    seria ``6-(3+2)`` que é 1.
 
 .. (The
@@ -1107,7 +1107,7 @@ operadores matemáticos da mesma forma que matemática.
    :answer_c: 3
    :answer_d: 13.667
    :correct: a
-   :feedback_a: Usando parênteses, a éxpressão (2*5) é calculada
+   :feedback_a: Usando parênteses, a expressão (2*5) é calculada
 		primeiro, depois (10 // 3), então (16-3), e então
 		(13+1).
    :feedback_b: Lembre que * tem precedência sobre -.
@@ -1230,7 +1230,7 @@ em um capítulo mais adiante.
 	indicar atribuição, como ``<-`` ou ``:=``. A intensão é evita
 	confusão. Python optou por usar ``=`` para atribuição e ``==``
 	para igualdade. Esta é uma escolha popular e também encontrada
-	em liguagens como C, C++, Java e C#.
+	em linguagens como C, C++, Java e C#.
 
         
 **Teste seu entendimento**

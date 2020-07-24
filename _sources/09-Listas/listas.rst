@@ -75,7 +75,7 @@ inteiro e uma outra lista.
 
 Um lista em uma outra lista é dita **aninhada** (*nested*) e a lista
 mais interna é chamada frequentemente de **sublista** (*sublist*).
-Finalemente, existe uma lista especial que não contém elemento
+Finalmente, existe uma lista especial que não contém elemento
 algum. Ela é chamada de lista vazia e é denotada por ``[]``.
 
 
@@ -101,13 +101,17 @@ e termos listas como parâmetro de funções.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_1_1 
-   :answer_a: Falso
-   :answer_b: Verdadeiro
-   :correct: a
-   :feedback_a: Diferentemente de strings, listas podem ser formadas por valores de tipos diferentes.
-   :feedback_b: Listas são heterogêneas, o que significa que elas podem ter valores de tipos diferentes. 
 
-   Uma lista só pode conter números inteiros?
+    Uma lista só pode conter números inteiros?
+
+    - Falso
+    
+      + Diferentemente de strings, listas podem ser formadas por valores de tipos diferentes.
+    
+    - Verdadeiro
+        
+      - Listas são heterogêneas, o que significa que elas podem ter valores de tipos diferentes. 
+
 
 
 .. index:: índices de listas;, índices; list traversal
@@ -121,7 +125,7 @@ Comprimento de uma lista
 .. that ``len`` only returns the top-most length.  In other words, sublists are considered to be a single
 .. item when counting the length of the list.
 
-Da mesma forma que occore com strings, a função ``len`` retorna o
+Da mesma forma que ocorre com strings, a função ``len`` retorna o
 comprimento de uma lista (o número de elementos na lista).
 Entretanto, como listas podem conter itens que são listas, é
 importante notar que ``len`` somente retorna o comprimento da lista
@@ -139,33 +143,41 @@ comprimento da lista.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_2_1 
-   :answer_a: 4
-   :answer_b: 5
-   :correct: b
-   :feedback_a: len retorna o número de itens em uma lista, não o maior índice
-   :feedback_b: Sim, a lista é formada por 5 itens.
 
-   O que é impresso pelo trecho de código a seguir?
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
    
-   <pre>
-   uma_lista = [3, 67, "gato", 3.14, False]
-   print(len(uma_lista))
-   </pre>
+        uma_lista = [3, 67, "gato", 3.14, False]
+        print(len(uma_lista))
+
+    - 4
+    
+      - len retorna o número de itens em uma lista, não o maior índice
+    
+    - 5
+
+      + Sim, a lista é formada por 5 itens.        
+        
    
 .. mchoice:: test_question9_2_2
-   :answer_a: 7
-   :answer_b: 8
-   :correct: a
-   :feedback_a: Sim, existem 7 itens na lista, sendo que dois itens são listas.
-   :feedback_b: len retorna o número de itens na lista. O número de itens nas sublistas não são contados.
 
-   O que é impresso pelo trecho de código a seguir?
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
    
-   <pre>
-   uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
-   print(len(uma_lista))
-   </pre> 
+        uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
+        print(len(uma_lista))
    
+    - 7
+    
+      + Sim, existem 7 itens na lista, sendo que dois itens são listas.
+    
+    - 8
+    
+      - len retorna o número de itens na lista. O número de itens nas sublistas não são contados.
+        
+        
 
 Acessando os elementos
 ----------------------
@@ -180,7 +192,7 @@ Acessando os elementos
 A sintaxe para acessar um elemento de uma lista é a mesma usada para
 acessar um caractere de um string. Nós usamos o operador de indexação
 ( ``[]`` -- não confundir com a lista vazia). A expressão dentro dos
-conchetes especifica o índice. Lembrar que o índice do primeiro
+colchetes especifica o índice. Lembrar que o índice do primeiro
 elemento é 0. Qualquer expressão que tenha como resultado um número
 inteiro pode ser usada como índice e como com strings, índices
 negativos indicarão elementos da direita para a esquerda ao invés de
@@ -198,54 +210,74 @@ da esquerda para a direita.
 **Teste seu entendimento**
  
 .. mchoice:: test_question9_3_1
-   :answer_a: [ ]
-   :answer_b: 3.14
-   :answer_c: False
-   :correct: b
-   :feedback_a: O índice da lista vazia é 4.
-   :feedback_b: Sim, 3.14 é o item de índice 5 já que o índice do primeiro elemento é 0 e sublistas contam com um elemento.
-   :feedback_c: False é o item de índice 6.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
-   print(uma_lista[5])
-   </pre>
-   
-.. mchoice:: test_question9_3_2
-   :answer_a: Error, you cannot use the upper method on a list.
-   :answer_b: 2
-   :answer_c: GATO
-   :correct: c
-   :feedback_a: uma_list[2] é o string 'gato' logo o método upper (maiúsculo) é legal.
-   :feedback_b: 2 é o índice.  Nós querenos o item que tem esse índice.
-   :feedback_c: Sim, o string 'gato' transformado pelo método upper em maiúsculo é GATO.
-   
-   O que é impresso pelo trecho de código a seguir?
 
-   <pre>
-   uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
-   print(uma_lista[2].upper())
-   </pre>
-   
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+    
+        uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
+        print(uma_lista[5])
+
+    - [ ]
+    
+      - O índice da lista vazia é 4.
+
+    - 3.14
+    
+      + Sim, 3.14 é o item de índice 5 já que o índice do primeiro elemento é 0 e sublistas contam com um elemento.
+
+    - False        
+      
+      - False é o item de índice 6.
+      
+.. mchoice:: test_question9_3_2
+
+    O que é impresso pelo trecho de código a seguir?
+
+    .. sourcecode:: python
+        
+        uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
+        print(uma_lista[2].upper())
+
+    - Erro, você não pode usar o método upper em uma lista.
+    
+      - uma_list[2] é o string 'gato' logo o método upper (maiúsculo) é legal.    
+    
+    - 2
+    
+      - 2 é o índice.  Nós queremos o item que tem esse índice.    
+    
+    - GATO
+    
+      + Sim, o string 'gato' transformado pelo método upper em maiúsculo é GATO.
+    
+    
 .. mchoice:: test_question9_3_3
-   :answer_a: 56
-   :answer_b: g
-   :answer_c: gato
-   :answer_d: Error, you cannot have two index values unless you are using slicing.
-   :correct: b
-   :feedback_a: Índices começam de 0 e não de 1.
-   :feedback_b: Sim, o primeiro caractere do string de índice 2 é g.
-   :feedback_c: 'gato' é o item de índice 2, mas devemos determinar ainda o caractere de índice 0.
-   :feedback_d: Usar mais de um índice é correto.  Você deve ler da esquerda para a direita.
+
+    O que é impresso pelo trecho de código a seguir?
    
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
-   print(uma_lista[2][0])
-   </pre>
+    .. sourcecode:: python
+        
+        uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
+        print(uma_lista[2][0])
+
+    - 56
+    
+      - Índices começam de 0 e não de 1.
+    
+    - g
+    
+      + Sim, o primeiro caractere do string de índice 2 é g.
+    
+    - gato
+    
+      - 'gato' é o item de índice 2, mas devemos determinar ainda o caractere de índice 0.    
+    
+    - Erro, você não pode ter dois valores de índice a menos que você esteja usando fatias.
+
+      - Usar mais de um índice é correto.  Você deve ler da esquerda para a direita.   
+    
+
    
 .. List Membership
 
@@ -269,33 +301,39 @@ strings e eles também funcionam aqui.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_4_1
-   :answer_a: True
-   :answer_b: False
-   :correct: a
-   :feedback_a: Sim, 3.14 é um item da lista uma_lista.
-   :feedback_b: Existem 7 itens na lista, 3.14 é um deles. 
+
+    O que é impresso pelo trecho de código a seguir?
+
+    .. sourcecode:: python
+    
+        uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
+        print(3.14 in uma_lista)
+
+    - True
+    
+      + Sim, 3.14 é um item da lista uma_lista.    
+    
+    - False
+
+      - Existem 7 itens na lista, 3.14 é um deles. 
    
-   O que é impresso pelo trecho de código a seguir?
-
-   <pre>
-   uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
-   print(3.14 in uma_lista)
-   </pre>
-
 .. mchoice:: test_question9_4_2
-   :answer_a: True
-   :answer_b: False
-   :correct: b
-   :feedback_a: É retornado True apenas para itens na lista mais externa.  57 é um item de uma sublista.
-   :feedback_b: Sim, 57 não é um item da lista mais externa.  57 é um item de uma sublista.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
-   print(57 in uma_lista)
-   </pre>
 
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
+        print(57 in uma_lista)
+
+    - True
+
+      - É retornado True apenas para itens na lista mais externa.  57 é um item de uma sublista.
+
+    - False
+
+      + Sim, 57 não é um item da lista mais externa.  57 é um item de uma sublista.
+   
 
 .. Concatenation and Repetition
 
@@ -372,7 +410,7 @@ comparação dos seus ids.
 .. an existing list.  Again, the ids can help.
 
 O comando ``nova_lista = frutas + num_lista`` cria uma nova lista de
-objetos com o contéudo da lista ``frutas`` seguido pelo conteúdo da lista
+objetos com o conteúdo da lista ``frutas`` seguido pelo conteúdo da lista
 ``num_lista``. Podemos ver que está é uma lista nova olhando os ids.
 O id da ``nova_lista`` não e o mesmo que o das outras. É extremamente
 importante que você saiba quando está criando uma nova lista ou apenas
@@ -388,9 +426,9 @@ tarefa.
 .. memory).
 
 Python possui uma função nativa (*build-in*) que recebe um objeto
-como argumento e retorna o seu id. A função é comvenientemente chamada
+como argumento e retorna o seu id. A função é convenientemente chamada
 de ``id`` e tem um único parâmetro, o objeto que você está interessado
-em descobrir o id. Você pode ver no examplo abaixo que o id real é
+em descobrir o id. Você pode ver no exemplo abaixo que o id real é
 usualmente um número inteiro muito grande (correspondente a um endereço
 na memória).
 
@@ -405,43 +443,56 @@ na memória).
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_5_1
-   :answer_a: 6
-   :answer_b: [1,2,3,4,5,6]
-   :answer_c: [1,3,5,2,4,6]
-   :answer_d: [3,7,11]
-   :correct: c
-   :feedback_a: Concatenação não soma soma os comprimentos da listas.
-   :feedback_b: Concatenação não reordena os itens. 
-   :feedback_c: Sim, uma nova lista com os itens da primeira lista seguidos pelos itens da segunda lista.
-   :feedback_d: Concatenação não adiciona os itens da listas.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [1, 3, 5]
-   outra_lista = [2, 4, 6]
-   print(uma_lista + outra_lista)
-   </pre>
+
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [1, 3, 5]
+        outra_lista = [2, 4, 6]
+        print(uma_lista + outra_lista)
+
+    - 6
+
+      - Concatenação não soma soma os comprimentos da listas.
+
+    - [1,2,3,4,5,6]
+
+      - Concatenação não reordena os itens. 
+
+    - [1,3,5,2,4,6]
+
+      + Sim, uma nova lista com os itens da primeira lista seguidos pelos itens da segunda lista.
+
+    - [3,7,11]
+
+      - Concatenação não adiciona os itens da listas.   
    
    
 .. mchoice:: test_question9_5_2
-   :answer_a: 9
-   :answer_b: [1, 1, 1, 3, 3, 3, 5, 5, 5]
-   :answer_c: [1, 3, 5, 1, 3, 5, 1, 3, 5]
-   :answer_d: [3, 9, 15]
-   :correct: c
-   :feedback_a: Repetição não multiplica o comprimento das listas. Ela repete os itens.
-   :feedback_b: Repetição não repete cada item individualmente.
-   :feedback_c: Sim, a lista é repetida 3 vezes inteiramente, uma vez atrás da outra.
-   :feedback_d: Repetição não multiplica os itens da lista individualmente.
 
-   O que é impresso pelo trecho de código a seguir?
+    O que é impresso pelo trecho de código a seguir?
    
-   <pre>
-   uma_lista = [1, 3, 5]
-   print(uma_lista * 3)
-   </pre>
+    .. sourcecode:: python
+        
+        uma_lista = [1, 3, 5]
+        print(uma_lista * 3)
 
+    - 9
+
+      - Repetição não multiplica o comprimento das listas. Ela repete os itens.
+
+    - [1, 1, 1, 3, 3, 3, 5, 5, 5]
+
+      - Repetição não repete cada item individualmente.
+
+    - [1, 3, 5, 1, 3, 5, 1, 3, 5]
+
+      + Sim, a lista é repetida 3 vezes inteiramente, uma vez atrás da outra.
+
+    - [3, 9, 15]
+
+      - Repetição não multiplica os itens da lista individualmente.
    
 
 .. List Slices
@@ -470,21 +521,26 @@ elemento com esse índice não faz parte da fatia).
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_6_1
-   :answer_a: [ [ ], 3.14, False]
-   :answer_b: [ [ ], 3.14]
-   :answer_c: [ [56, 57, "cachorro"], [ ], 3.14, False]
-   :correct: a
-   :feedback_a: Sim, a fatia começa no item de índice 4 e termina no  último item da lista.
-   :feedback_b: Não colocando o limite superior da fatia incluímos até o último item.
-   :feedback_c: Índices começam de 0.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
-   print(uma_lista[4:])
-   </pre>
 
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [3, 67, "gato", [56, 57, "cachorro"], [ ], 3.14, False]
+        print(uma_lista[4:])
+
+    - [ [ ], 3.14, False]
+
+      + Sim, a fatia começa no item de índice 4 e termina no  último item da lista.
+
+    - [ [ ], 3.14]
+
+      - Não colocando o limite superior da fatia incluímos até o último item.
+
+    - [ [56, 57, "cachorro"], [ ], 3.14, False]
+
+      - Índices começam de 0.
+   
 
 .. index:: mutável; atribuição de item; imutável
     
@@ -551,7 +607,7 @@ vários elementos de uma só vez.
 
 .. We can also remove elements from a list by assigning the empty list to them.
 
-Também podemosremover elementos de uma lista atribuindo a lista vazia a
+Também podemos remover elementos de uma lista atribuindo a lista vazia a
 eles.
 
 .. activecode:: ch09_9
@@ -577,22 +633,27 @@ na posição desejada.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_7_1
-   :answer_a: [4, 2, True, 8, 6, 5]
-   :answer_b: [4, 2, True, 6, 5]
-   :answer_c: Erro, é uma atribuição ilegal
-   :correct: b
-   :feedback_a: Atribuição de item não insere o novo item na lista.
-   :feedback_b: Sim, o valor True é colocado na posição de índice 2 da lista, 8 é trocado por True.
-   :feedback_c: Atribuição de item é permida em listas.  Listas são mutáveis.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [4, 2, 8, 6, 5]
-   uma_lista[2] = True
-   print(uma_lista)
-   </pre>
 
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [4, 2, 8, 6, 5]
+        uma_lista[2] = True
+        print(uma_lista)
+
+    - [4, 2, True, 8, 6, 5]
+
+      - Atribuição de item não insere o novo item na lista.
+
+    - [4, 2, True, 6, 5]
+
+      + Sim, o valor True é colocado na posição de índice 2 da lista, 8 é trocado por True.
+
+    - Erro, é uma atribuição ilegal
+
+      - Atribuição de item é permitida em listas. Listas são mutáveis.
+   
 .. index:: comando del; comando; del
 
 .. List Deletion
@@ -790,7 +851,7 @@ Apelidos (*Aliasing*)
 .. Since variables refer to objects, if we assign one variable to another, both
 .. variables refer to the same object:
 
-Como variáveis fazem referência a objetos, se atribuimos uma variável
+Como variáveis fazem referência a objetos, se atribuirmos uma variável
 a outra, ambas as variáveis passam a fazer referência ao mesmo objeto.
 
 .. activecode:: listalias1
@@ -850,20 +911,23 @@ inteiros quando surge uma oportunidade para economizar espaço.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_10_1
-   :answer_a: [4, 2, 8, 6, 5]
-   :answer_b: [4, 2, 8, 999, 5]
-   :correct: b
-   :feedback_a: lista_b não é uma cópia de a_lista, ela é uma referência para a lista a qual lista_a faz referência.
-   :feedback_b: Sim, como lista_a e lista_b fazem referência a mesma lista, mudança em uma também altera a outra.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   lista_a = [4, 2, 8, 6, 5]
-   lista_b = lista_a
-   lista_b[3] = 999
-   print(lista_a)
-   </pre>
+
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        lista_a = [4, 2, 8, 6, 5]
+        lista_b = lista_a
+        lista_b[3] = 999
+        print(lista_a)
+
+    - [4, 2, 8, 6, 5]
+
+      - lista_b não é uma cópia de a_lista, ela é uma referência para a lista a qual lista_a faz referência.
+
+    - [4, 2, 8, 999, 5]
+
+      + Sim, como lista_a e lista_b fazem referência a mesma lista, mudança em uma também altera a outra.
 
 
 .. index:: clone
@@ -1020,43 +1084,56 @@ Execute o código passo a passo e preste particular atenção
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_12_1
-   :answer_a: [4, 2, 8, 999, 5, 4, 2, 8, 6, 5]
-   :answer_b: [4, 2, 8, 999, 5]
-   :answer_c: [4, 2, 8, 6, 5]
-   :correct: c
-   :feedback_a: print(lista_a) não print(lista_b)
-   :feedback_b: lista_b é alterada, lista_a não é.
-   :feedback_c: Sim, lista_a não foi alterada pela atribuição. lista_b é uma cópia das referência na lista a.
+
    
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   lista_a = [4, 2, 8, 6, 5]
-   lista_b = lista_a * 2
-   lista_b[3] = 999
-   print(lista_a)
-   </pre>
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        lista_a = [4, 2, 8, 6, 5]
+        lista_b = lista_a * 2
+        lista_b[3] = 999
+        print(lista_a)
+
+    - [4, 2, 8, 999, 5, 4, 2, 8, 6, 5]
+
+      - print(lista_a) não print(lista_b)
+
+    - [4, 2, 8, 999, 5]
+
+      - lista_b é alterada, lista_a não é.
+
+    - [4, 2, 8, 6, 5]
+
+      + Sim, lista_a não foi alterada pela atribuição. lista_b é uma cópia das referência na lista a.
+
 
 .. mchoice:: test_question9_12_2
-   :answer_a: [4,2,8,999,5,4,2,8,999,5]
-   :answer_b: [[4,2,8,999,5],[4,2,8,999,5]]
-   :answer_c: [4,2,8,6,5]
-   :answer_d: [[4,2,8,999,5],[4,2,8,6,5]]
-   :correct: b
-   :feedback_a: [lista_a] * 2 cria uma lista contendo a lista_a repetida 2 vezes
-   :feedback_b: Sim, lista_b contém duas referência, ambas para a lista_a.
-   :feedback_c: print(lista_b)
-   :feedback_d: lista_b contém duas referências, ambas para lista_a. Logo, alterações na lista_a aparecem em ambas as referências.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   lista_a = [4, 2, 8, 6, 5]
-   lista_b = [lista_a] * 2
-   lista_a[3] = 999
-   print(lista_b)
-   </pre>
 
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        lista_a = [4, 2, 8, 6, 5]
+        lista_b = [lista_a] * 2
+        lista_a[3] = 999
+        print(lista_b)
+
+    - [4,2,8,999,5,4,2,8,999,5]
+
+      - [lista_a] * 2 cria uma lista contendo a lista_a repetida 2 vezes
+
+    - [[4,2,8,999,5],[4,2,8,999,5]]
+
+      + Sim, lista_b contém duas referência, ambas para a lista_a.
+
+    - [4,2,8,6,5]
+
+      - print(lista_b)
+
+    - [[4,2,8,999,5],[4,2,8,6,5]]
+
+      - lista_b contém duas referências, ambas para lista_a. Logo, alterações na lista_a aparecem em ambas as referências.
 
 
 .. index:: lista; concatenação; append
@@ -1168,7 +1245,7 @@ Detalhes desses e de outros métodos podem ser vistos em `Python Documentation
    of sorting ``minha_lista`` will result in losing the entire list.
 
 É importante notar que ``append``, ``sort``, e ``reverse`` retornam ``None``.
-Isto significa que atribuira a ``minha_lista`` o resultado da
+Isto significa que atribuir a ``minha_lista`` o resultado da
 ordenação de ``minha_lista`` resultará na perda da lista.
 
 
@@ -1187,92 +1264,104 @@ ordenação de ``minha_lista`` resultará na perda da lista.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_13_1
-   :answer_a: [4, 2, 8, 6, 5, False, True]
-   :answer_b: [4, 2, 8, 6, 5, True, False]
-   :answer_c: [True, False, 4, 2, 8, 6, 5]
-   :correct: b
-   :feedback_a: True foi inserido primeiro, False foi inserido por último.
-   :feedback_b: Sim, cada item é inserido no final da lista.
-   :feedback_c: append insere um item no final da lista e não no início.
 
-..   :feedback_a: True was added first, then False was added last.
-..   :feedback_b: Yes, each item is added to the end of the list.
-..   :feedback_c: append adds at the end, not the beginning.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [4,2,8,6,5]
-   uma_lista.append(True)
-   uma_lista.append(False)
-   print(uma_lista)
-   </pre>
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [4,2,8,6,5]
+        uma_lista.append(True)
+        uma_lista.append(False)
+        print(uma_lista)
+
+    - [4, 2, 8, 6, 5, False, True]
+
+      - True foi inserido primeiro, False foi inserido por último.
+
+    - [4, 2, 8, 6, 5, True, False]
+
+      + Sim, cada item é inserido no final da lista.
+
+    - [True, False, 4, 2, 8, 6, 5]
+
+      - append insere um item no final da lista e não no início.
 
 
 .. mchoice:: test_question9_13_2
-   :answer_a: [False, 4, 2, True, 8, 6, 5]
-   :answer_b: [4, False, True, 2, 8, 6, 5]
-   :answer_c: [False, 2, True, 6, 5]
-   :correct: a
-   :feedback_a: Sim, primeiro True foi inserido na posição de índice 2, depois False foi inserido na posição 0.
-   :feedback_b: insert coloca itens na posição especificada e desloca os itens à direita dessa posição.
-   :feedback_c: insert não remove ou troca item algum.
+
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [4, 2, 8, 6, 5]
+        uma_lista.insert(2,True)
+        uma_lista.insert(0,False)
+        print(uma_lista)
+
+    - [False, 4, 2, True, 8, 6, 5]
+
+      + Sim, primeiro True foi inserido na posição de índice 2, depois False foi inserido na posição 0.
+
+    - [4, False, True, 2, 8, 6, 5]
+
+      - insert coloca itens na posição especificada e desloca os itens à direita dessa posição.
+
+    - [False, 2, True, 6, 5]
+
+      - insert não remove ou troca item algum.
    
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [4, 2, 8, 6, 5]
-   uma_lista.insert(2,True)
-   uma_lista.insert(0,False)
-   print(uma_lista)
-   </pre>
 
 .. mchoice:: test_question9_13_3
-   :answer_a: [4, 8, 6]
-   :answer_b: [2, 6, 5]
-   :answer_c: [4, 2, 6]
-   :correct: c
-   :feedback_a: pop(2) remove o item na posição de índice 2, não remove o valor 2.
-   :feedback_b: pop() remove o último item, não o primeiro.
-   :feedback_c: Sim, primeiro 8 foi removido, depois o último item, que era 5.
 
-..   :feedback_a: pop(2) removes the item at index 2, not the 2 itself.
-..   :feedback_b: pop() removes the last item, not the first.
-..   :feedback_c: Yes, first the 8 was removed, then the last item, which was 5.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [4, 2, 8, 6, 5]
-   temp = uma_lista.pop(2)
-   temp = uma_lista.pop()
-   print(uma_lista)
-   </pre>
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [4, 2, 8, 6, 5]
+        temp = uma_lista.pop(2)
+        temp = uma_lista.pop()
+        print(uma_lista)
+
+    - [4, 8, 6]
+
+      - pop(2) remove o item na posição de índice 2, não remove o valor 2.
+
+    - [2, 6, 5]
+
+      - pop() remove o último item, não o primeiro.
+
+    - [4, 2, 6]
+
+      + Sim, primeiro 8 foi removido, depois o último item, que era 5.
+
    
    
 .. mchoice:: test_question9_13_4
-   :answer_a: [2, 8, 6, 5]
-   :answer_b: [4, 2, 8, 6, 5]
-   :answer_c: 4
-   :answer_d: None
-   :correct: c
-   :feedback_a: uma_lista é agora o valor que foi retornado por pop(0).
-   :feedback_b: pop(0) altera a lista removendo o último elemento.
-   :feedback_c: Sim, primeiro 4 foi removido da lista, então retornado e atribuído a uma_lista.  A  lista foi perdida.
-   :feedback_d: pop(0) retorna o primeiro item da list, logo uma_lista foi alterada.
 
-..   :feedback_a: uma_lista is now the value that was returned from pop(0).
-..   :feedback_b: pop(0) changes the list by removing the first item.
-..   :feedback_c: Yes, first the 4 was removed from the list, then returned and assigned to uma_lista.  The list is lost.
-..   :feedback_d: pop(0) returns the first item in the list so uma_lista has now been changed.
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [4, 2, 8, 6, 5]
+        uma_lista = uma_lista.pop(0)
+        print(uma_lista)
+
+    - [2, 8, 6, 5]
+
+      - uma_lista é agora o valor que foi retornado por pop(0).
+
+    - [4, 2, 8, 6, 5]
+
+      - pop(0) altera a lista removendo o último elemento.
+
+    - 4
+
+      + Sim, primeiro 4 foi removido da lista, então retornado e atribuído a uma_lista.  A  lista foi perdida.
+
+    - None
+
+      - pop(0) retorna o primeiro item da list, logo uma_lista foi alterada.
  
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [4, 2, 8, 6, 5]
-   uma_lista = uma_lista.pop(0)
-   print(uma_lista)
-   </pre>
 
 .. admonition:: Scratch Editor
 
@@ -1509,7 +1598,7 @@ que o operador concatenação exige duas listas para fazer o seu trabalho.
    ``origlist``.  It stays the same before and after the append.
 
 É importante observar que com ``append``, a lista original é
-simplemente *modificada*.  É possível ver isto observando o `id` de
+simplesmente *modificada*.  É possível ver isto observando o `id` de
 ``lista_orig``.  O `id` é o mesmo antes e depois de executarmos
 append.
 
@@ -1527,19 +1616,23 @@ para notar a diferença. Com a concatenação um *nova* lista é criada.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_15_1
-   :answer_a: [4, 2, 8, 6, 5, 999]
-   :answer_b: Erro, não podemos concatenar uma lista e um inteiro.
-   :correct: b
-   :feedback_a: Você não pode concatenar uma lista e um inteiro.
-   :feedback_b: Sim, para executarmos a concatenação necessitamos escrever uma_lista+[999].  Devemos ter duas listas.
+
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [4, 2, 8, 6, 5]
+        uma_lista = uma_lista + 999
+        print(uma_lista)
+
+    - [4, 2, 8, 6, 5, 999]
+
+      - Você não pode concatenar uma lista e um inteiro.
+
+    - Erro, não podemos concatenar uma lista e um inteiro.
+
+      + Sim, para executarmos a concatenação necessitamos escrever uma_lista+[999].  Devemos ter duas listas.
    
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [4, 2, 8, 6, 5]
-   uma_lista = uma_lista + 999
-   print(uma_lista)
-   </pre>
 
 .. index:: for loop, enumerate, comando for
 
@@ -1604,7 +1697,7 @@ número de itens na lista.
    the ``range`` function returns a sequence of integers.
 
 Qualquer expressão sequencial pode ser usada em um laço ``for``.
-Por exemplo, a função ``range`` retornal uma sequência de inteiros.
+Por exemplo, a função ``range`` retorna uma sequência de inteiros.
 
 
 .. activecode:: chp09_for3
@@ -1614,7 +1707,7 @@ Por exemplo, a função ``range`` retornal uma sequência de inteiros.
             print(numero)
 
 
-Este exemplo exibe todos os multiplos de 3 entre 0 e 20.
+Este exemplo exibe todos os múltiplos de 3 entre 0 e 20.
 
 .. This example prints all the multiples of 3 between 0 and 19.
 
@@ -1644,7 +1737,7 @@ elevados ao quadrado utilizando iteração por posição.
    it works. We are interested here in both the *value* and its *index* within the
    list, so that we can assign a new value to it.
 
-Para um minuto para refretir sobre ``range(len(numeros)`` até que
+Pare um minuto para refletir sobre ``range(len(numeros)`` até que
 você entenda como  funciona. Estamos interessados aqui sobre ambos
 o *valor* e o *índice* de uma posição da lista de tal maneira que
 atribuir un novo valor à posição.
@@ -1657,29 +1750,37 @@ atribuir un novo valor à posição.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_16_1
-   :answer_a: [4, 2, 8, 6, 5]
-   :answer_b: [4, 2, 8, 6, 5, 5]
-   :answer_c: [9, 7, 13, 11, 10]
-   :answer_d: Erro, não podemos concatenar dentro de um append.
-   :correct: c
-   :feedback_a: 5 is adicionado a cada item antes que o append seja executado.
-   :feedback_b: Existem muitos item na lista.  Somente 5 operações append são executadas.
-   :feedback_c: Sim, o laço for processa cada item da lista: 5 is adicionado antes que o valor resultante seja inserido na nova lista.
-   :feedback_d: 5 is adicionado a cada item da lista antes que a função append seja executada.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   lista = [4, 2, 8, 6, 5]
-   nova_lista = [ ]
-   for item in lista:
-      nova_lista.append(item+5)
-   print(nova_lista)
-   </pre>
+
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        lista = [4, 2, 8, 6, 5]
+        nova_lista = [ ]
+        for item in lista:
+            nova_lista.append(item+5)
+        print(nova_lista)
+
+    - [4, 2, 8, 6, 5]
+
+      - 5 is adicionado a cada item antes que o append seja executado.
+
+    - [4, 2, 8, 6, 5, 5]
+
+      - Existem muitos item na lista. Somente 5 operações append são executadas.
+
+    - [9, 7, 13, 11, 10]
+
+      + Sim, o laço for processa cada item da lista: 5 é adicionado antes que o valor resultante seja inserido na nova lista.
+
+    - Erro, não podemos concatenar dentro de um append.
+
+      - 5 é adicionado a cada item da lista antes que a função append seja executada.
+
 
 .. index:: parameter
 
-.. index:: parametro
+.. index:: parâmetro
 
 .. index:: side effect, modifier
 
@@ -2055,24 +2156,31 @@ resultante.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_20_1
-   :answer_a: [4, 2, 8, 6, 5]
-   :answer_b: [8, 4, 16, 12, 10]
-   :answer_c: 10
-   :answer_d: [10].
-   :correct: d
-   :feedback_a: Item de uma_lista são dobrados antes de serem colocados em outra_lista
-   :feedback_b: Nem todo os items em uma_lista são inseridos em outra_lista. Veja a cláusula if.
-   :feedback_c: O resultado é do tipo list.
-   :feedback_d: Sim, 5 é o único número ímpar em uma_lista.  Ele é dobrado antes de ser inserido em outra_lista.
-   
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   uma_lista = [4,2,8,6,5]
-   outra_lista = [num*2 for num in uma_lista if num%2==1]
-   print(outra_lista)
-   </pre>
 
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        uma_lista = [4,2,8,6,5]
+        outra_lista = [num*2 for num in uma_lista if num%2==1]
+        print(outra_lista)
+
+    - [4, 2, 8, 6, 5]
+
+      - Item de uma_lista são dobrados antes de serem colocados em outra_lista
+
+    - [8, 4, 16, 12, 10]
+
+      - Nem todo os items em uma_lista são inseridos em outra_lista. Veja a cláusula if.
+
+    - 10
+
+      - O resultado é do tipo list.
+
+    - [10].
+
+      + Sim, 5 é o único número ímpar em uma_lista.  Ele é dobrado antes de ser inserido em outra_lista.
+   
 .. index:: nested list, list; nested
 
 .. index:: lista aninhada, lista; aninhamento
@@ -2118,25 +2226,34 @@ da esquerda para a direita.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_21_1
-   :answer_a: 6
-   :answer_b: 8
-   :answer_c: 888
-   :answer_d: 999
-   :correct: c
-   :feedback_a: 6 está na lista errada.  lista[1] se refere ao segundo item de lista, a saber [888,999].
-   :feedback_b: 8 esta na lista errada.  lista[1] se refere ao segundo item de lista, a saber [888,999].
-   :feedback_c: Sim, lista[0][1][0] é True e lista[1] é a segunda lista, o primeiro item é 888.
-   :feedback_d: lista[0][1][0] is False.  Olhe novamente o comando.
+
+    O que é impresso pelo trecho de código a seguir?
+    
+    .. sourcecode:: python
+        
+        lista = [ [4, [True, False], 6, 8], [888, 999] ]
+        if lista[0][1][0]:
+            print(lista[1][0])
+        else:
+            print(lista[1][1])
+
+    - 6
+
+      - 6 está na lista errada.  lista[1] se refere ao segundo item de lista, a saber [888,999].
+
+    - 8
+
+      - 8 esta na lista errada.  lista[1] se refere ao segundo item de lista, a saber [888,999].
+
+    - 888
+
+      + Sim, lista[0][1][0] é True e lista[1] é a segunda lista, o primeiro item é 888.
+
+    - 999
+
+      - lista[0][1][0] is False.  Olhe novamente o comando.
+
    
-   O que é impresso pelo trecho de código a seguir?
-   
-   <pre>
-   lista = [ [4, [True, False], 6, 8], [888, 999] ]
-   if lista[0][1][0]:
-      print(lista[1][0])
-   else:
-      print(lista[1][1])
-   </pre>
 
 .. index:: strings and lists, split, join
 
@@ -2227,27 +2344,33 @@ A lista que estamos grudando (``lista`` no exemplo) não é modificada.
 **Teste seu entendimento**
 
 .. mchoice:: test_question9_22_1
-   :answer_a: Jesus
-   :answer_b: CarolinaMariadeJesus
-   :answer_c: CMdJ
-   :answer_d: Clarice Lispector
-   :correct: c
-   :feedback_a: lista_de_nomes é a lista com as palavras no nome.
-   :feedback_b: Muitos caracteres.  Deveria conter apenas uma letra de cada nome.
-   :feedback_c: Sim, split cria uma lista com quatro palavras. O laço for itera sobre cada palavra criando um string com o primeiro caractere de cada uma.
-   :feedback_d: Isso não faz sentido, mas ambas são excelentes escritoras.
 
+    O que é impresso pelo trecho de código a seguir?
 
-   O que é impresso pelo trecho de código a seguir?
+    .. sourcecode:: python
+        
+        escritora = "Carolina Maria de Jesus"
+        lista_de_nomes = escritora.split()
+        inic = ""
+        for nome in lista_de_nomes:
+            inic = inic + nome[0]
+        print(inic)
 
-   <pre>
-   escritora = "Carolina Maria de Jesus"
-   lista_de_nomes = escritora.split()
-   inic = ""
-   for nome in lista_de_nomes:
-      inic = inic + nome[0]
-   print(inic)
-   </pre>
+    - Jesus
+
+      - lista_de_nomes é a lista com as palavras no nome.
+
+    - CarolinaMariadeJesus
+
+      - Muitos caracteres.  Deveria conter apenas uma letra de cada nome.
+
+    - CMdJ
+
+      + Sim, split cria uma lista com quatro palavras. O laço for itera sobre cada palavra criando um string com o primeiro caractere de cada uma.
+
+    - Clarice Lispector
+
+      - Isso não faz sentido, mas ambas são excelentes escritoras.
 
     
 .. ``list`` Type Conversion Function
@@ -2421,7 +2544,7 @@ desejamos concatenar  a fim de obtermos uma nova tupla.
 Para criar uma tupla com um único elemento (mas você provavelmente
 não fará isso frequentemente), podemos incluir no final uma vírgula,
 já que sem a vírgula no final, Python tratará ``(5)`` abaixo como um número inteiro
-entre parenteses:
+entre parênteses:
 
 
 .. activecode:: chp09_tuple2
