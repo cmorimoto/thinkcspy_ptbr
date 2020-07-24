@@ -36,7 +36,7 @@ dos conceitos fundamentais de Python.
 Variáveis e tipos de dados
 --------------------------
 
-Um **valor** é um dos coisas fundamentais --- como uma palavra ou
+Um **valor** é uma das coisas fundamentais --- como uma palavra ou
 número --- que um programa manipula. Os valores que vimos até o
 momento são ``5`` (o resultado quando fazemos a adição ``2 + 3``), e
 ``"Olá, mundo!"``. Nós frequentemente nos referimos a esses valores
@@ -71,10 +71,10 @@ pertencem a classe chamada **int**.
 
 .. note:: 
     Quando mostramos o valor de um string usando a função
-    ``print``, como na terceira linha acima, as aspas não estão
-    presentes. O valor de um string é a sequência de caracteres entre
+    ``print``, como na terceira linha acima, as aspas não são mostradas pela função ``print``. 
+    O valor de um string é a sequência de caracteres entre
     as aspas.  As aspas são apenas necessárias para ajudar o Python a
-    saber qual é o valor delimitando-o.
+    saber qual é esse valor, elas servem para delimitar o string.
 
 No Python shell, não é necessário usar a função ``print``` para ver o
 valor mostrado acima.  O shell executa a função e automaticamente
@@ -520,7 +520,7 @@ têm um significado especial, portanto é mais seguro que iniciantes
 usem variáveis que começam com uma letra.  
 
 Se você der a uma variável um nome ilegal, ocorrerá um erro de sintaxe. 
-No exemploa seguir, cada nome de variável é ilegal.
+No exemplo a seguir, cada nome de variável é ilegal.
 
 ::
 
@@ -533,7 +533,7 @@ Já  ``mais$`` é ilegal pois contém um caractere ilegal, o símbolo de
 cifrão. Mas o que está errado com ``class``?
 
 Ocorre que ``class`` é uma das **palavras reservadas** (*keywords*) de Python.
-As palavras reservadas definem a sintaxe da linguage e sua estrutura e
+As palavras reservadas definem a sintaxe da linguagem e sua estrutura e
 não podem ser usadas como nomes de variáveis.
 Python tem pouco mais de trinta palavras reservadas (e uma vez ou
 outra melhorias em Python introduzem ou eliminam uma ou duas): 
@@ -547,7 +547,7 @@ pass     raise    return   try      while    with
 yield    True     False    None
 ======== ======== ======== ======== ======== ========
 
-Você pode desejar mater está lista à mão.
+Você pode desejar manter esta lista à mão.
 Se o interpretador reclamar sobre um dos nomes de suas variáveis e
 você  não sabe a razão, veja se ele está nesta lista.
 
@@ -613,9 +613,8 @@ calculadas. Se você pde ao Pyhton que
 
 
 Neste exemplo ``len`` é uma função nativa (*built-in*) no Python que
-returna o número de caracteres em um string. Vimos anteriormente que
-as funções ``print`` e ``type``, logo este é o nosso terceiro exemplo
-de uma função!
+devolve o número de caracteres em um string. Já vimos anteriormente outras 
+duas funções nativas do Python, que são ``print`` e ``type``, logo este é o nosso terceiro exemplo!
 
 O *cálculo de uma expressão* (*evaluation of an expression*) produz um
 valor, que é a razão do expressão poder aparecer do lado direito de em
@@ -663,9 +662,9 @@ algum. Eles são simplesmente executados.
 
 .. On the other hand, the result of executing the assignment statement is the creation of a reference from a variable, ``y``, to a value, ``3.14``.  When we execute the print function working on ``y``, we see the value that y is referring to.  In fact, evaluating ``y`` by itself results in the same response.
 
-Por outro lado, o resultado da execução de um comando de atribuição é a criação de uma referência da variável, ``y``, para o valor, ``3.14``. Quando executamos a função print com ``y`` como argumento, nós vemos o valor ao qual y se refere. De fato, digitando apenas ``y`` obtermos o mesmo resultado.
+Por outro lado, o resultado da execução de um comando de atribuição é a criação de uma referência da variável, ``y``, para o valor, ``3.14``. Quando executamos a função print com ``y`` como argumento, nós vemos o valor ao qual y se refere. De fato, digitando apenas ``y`` obtemos o mesmo resultado.
 
-..operator, operand, expression, integer division
+.. operator, operand, expression, integer division
 
 .. index:: operador, operando, expressão, divisão inteira
 
@@ -944,7 +943,7 @@ realizar essa tarefa. Essa função é chamada ``input``.
 .. text that has been entered is returned from the `input` function, and
 .. in this case assigned to the variable `n`.
 
-A função imput permite que apresentemos um texto ou **prompt** ao
+A função input permite que apresentemos um texto ou **prompt** ao
 usuário (*prompt string*). Quando a função é executada o texto é
 exibido. O usuário da programa pode digitar o nome e pressionar a tecla
 `enter`. Quando isto ocorre o texto que foi digitado é retornado pela
@@ -961,8 +960,8 @@ função `input` e, no presente caso, atribuído à variável `n`.
 .. a int or a float, using the `int` or `float` converter functions we saw
 .. earlier.
 
-Mesmo que você pessa ao usuário para digitar a sua idade, você
-receberá como resposta um string como ``"17"``. Será o se trabalho,
+Mesmo que você peça ao usuário para digitar a sua idade, você
+receberá como resposta um string como ``"17"``. Será o seu trabalho,
 como programador, converter esse string para int ou float, usando as
 funções de conversão `int` ou `float` que vimos anteriormente.
 
@@ -993,7 +992,7 @@ funções de conversão `int` ou `float` que vimos anteriormente.
 .. new value for the number of seconds to be converted.
 
 
-A variável ``segundos_str`` irá se referir ao atring que foi digitado
+A variável ``segundos_str`` irá se referir ao string que foi digitado
 pelo usuário. Como dissemos anteriormente, mesmo que esse string seja
 ``7684`, ele é ainda um string e não um número. Para convertê-lo para
 um inteiro usamos a função ``int``. O resultado será referenciado por 
@@ -1093,8 +1092,8 @@ operadores matemáticos da mesma forma que matemática.
     .. activecode:: ch02_23
         :nocanvas:
 
-        print(2 ** 3 ** 2)     # o ** mais a direira e executado primeiro!
-        print((2 ** 3) ** 2)   # use parenteses para forçar a ordem desejada!
+        print(2 ** 3 ** 2)     # o ** mais à direita é executado primeiro!
+        print((2 ** 3) ** 2)   # use parênteses para forçar a ordem desejada!
 
 .. The immediate mode command prompt of Python is great for exploring and
 .. experimenting with expressions like this.       
@@ -1114,7 +1113,7 @@ operadores matemáticos da mesma forma que matemática.
    :feedback_c: Lembre que // tem preceDência sobre -.
    :feedback_d: Lembre que // faz divisão inteira.
 
-   Qua é o valor a expressão a seguir?
+   Qua é o valor da expressão a seguir?
    <pre>
    16 - 2 * 5 // 3 + 1
    </pre>
@@ -1200,7 +1199,6 @@ mas devido a possibilidade de reatribuição, elas não precisam
 permanecer desta forma.
 
 
-
 .. activecode:: ch07_reassign2
     
     a = 5
@@ -1227,7 +1225,7 @@ em um capítulo mais adiante.
 
 
         Em algumas linguagens, um símbolos diferentes são usado para
-	indicar atribuição, como ``<-`` ou ``:=``. A intensão é evita
+	indicar atribuição, como ``<-`` ou ``:=``. A intensão é evitar
 	confusão. Python optou por usar ``=`` para atribuição e ``==``
 	para igualdade. Esta é uma escolha popular e também encontrada
 	em linguagens como C, C++, Java e C#.
@@ -1322,23 +1320,22 @@ foi inicializada com 6.
 .. called a **decrement**.  Sometimes programmers also talk about **bumping**
 .. a variable, which means the same as incrementing it by 1.
 
-Atualizar uma variável adicionando-se 1 é chmado de **incremento**
+Atualizar uma variável adicionando-se 1 é chamado de **incremento**
 (*increment*); subtrair 1 é chamado **decremento**
 (*decrement*). Alguns programadores também falam sobre **bumping** uma
 variável, que também significa incrementá-la de 1.
 
 
-.. admonition:: Advanced Topics
+.. admonition:: Tópicos Avançados
 
-   * `Topic 1: <at_1_1.html>`_ Python além do Navegador.  Está é uma
+   * `Tópico 1: Python além do Navegador <../Labs/pythonshell.html>`_.  Está é uma
      introdução gentil ao uso de Python a partir da linha de comando.
-     Vermos isto mais adiante, entretanto se você está curiosos sobre
-     como é Python fora do contexto deste livro eletrônico, você pode
-     dar uma olhada aqui. Também há instruções para a instalação de 
-     Python em seu computador.
+     Veremos isso mais adiante, entretanto se você está curioso sobre
+     como o Python é fora do contexto deste livro eletrônico, você pode
+     dar uma olhada aqui. Também há instruções sobre como instalar Python em seu computador.
 
 
-   * `Topic 2: <http://interactivepython.org/courselib/static/diveintopython3/index.html>`_ Dive Into Python 3,
+   * `Tópico 2: Dive Into Python 3 <https://diveintopython3.problemsolving.io/>`_,
      este é um livro online escrito por Mark Pilgrim. Se você teve
      alguma experiência prévia de programação esse livro leva você
      mais a fundo com os dois pés.
@@ -1583,7 +1580,7 @@ Exercícios
        # Problem 4
        # Meu Nome:
 
-#.  Considere a sentença: *Só trabalho sem diversão faz de João em chato.* 
+#.  Considere a sentença: *Só trabalho sem diversão faz de João um chato.* 
     Armazene cada palavra em uma variável, então imprima a sentença em uma linha usando a função 
     ``print``.
 

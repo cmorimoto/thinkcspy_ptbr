@@ -2,86 +2,64 @@
    Attribution-ShareAlike License CC BY-SA as well as the GNU FDL 1.3
 
 
-Python Beyond the Browser
+.. Python Beyond the Browser
+
+Python Além do Navegador
 =========================
 
-Although having Python available for you to use right in the browser is
-convenient, there are some limitations, and Python is a real programming
-language used for real applications by some very large and impressive
-corporations.  In this Advanced Topic we'll show you how to use the Python
-shell along with a simple text editor.  In a later advanced topic we will
-introduce you to something called an Integrated Development Environment or
-IDE that will make life even better for you when working on a larger Python
-project.
 
-The Python Shell
+Embora seja conveniente ter o Python disponível para uso direto no navegador, existem algumas limitações, e o Python é uma linguagem de programação real usada para desenvolver aplicativos reais por empresas muito grandes e impressionantes. Neste tópico avançado, mostraremos como usar o  Python `shell` junto com um editor de texto simples. Em um tópico avançado posterior, apresentaremos a você algo chamado Ambiente de Desenvolvimento Integrado ou IDE (do inglês *integrated development environment*) que vai facilitar muito sua vida quando você for trabalhar em um projeto grande usando Python.
+
+
+O Python Shell
 ----------------
 
-One of the most important ways you can learn computer science is by simply
-experimenting or trying things.  Unlike chemistry where you can explode
-things and do real damage, in computer science you really can't go wrong by
-just experimenting a bit.  In the worst case you might have to reboot your
-computer, but its pretty hard to do any long lasting damage.
 
-For those of you used to fancy graphical user interfaces the Python shell
-make look a bit primitive, but don't be fooled by the lack of fancy
-interface, you can do a lot of powerful stuff in the shell.  On a Mac or with
-Linux Python is already installed for you.  There is a short video link at
-the end of this topic that explains how to download and install Python on
-Windows.  Here is an example of what the shell looks like once you have it
-started up.
+
+Uma das maneiras mais importantes de aprender Ciência da Computação é simplesmente experimentar ou testar as coisas. Ao contrário da química, onde você pode explodir coisas e causar danos reais, na Ciência da Computação, você realmente não pode errar apenas experimentando um pouco. Na pior das hipóteses, talvez você precise reiniciar o computador, mas é muito difícil causar danos duradouros.
+
+Para aqueles que gostam de interfaces gráficas, o Python shell parece um pouco primitivo, mas não se deixe enganar pela falta de uma interface sofisticada, pois o shell lhe permite fazer muitas coisas poderosas. Em um Mac ou Linux, o Python já vem instalado para você. Há um breve link de vídeo no final deste tópico, que explica como baixar e instalar o Python no Windows. Aqui está um exemplo de como o shell se parece depois de inicializado.
 
 .. image::  Figures/python_shell.png
 
 
-To run the Python shell you will first need to start up the Terminal
-application, on the Mac you can find this under Utilities in the Applications
-folder, on most versions of Linux you can find it under the accessories menu.
-Once you have a terminal started, you simply type python and press the return
-key.  To shart the shell under windows simply go to the start menu and choose
-`Python (command line)` from the menu.
+Para executar o Python shell, você primeiro precisará iniciar o program "Terminal". No Mac, você pode encontrar o Terminal dentre os Utilitários, na pasta de Aplicativos.
+Na maioria das versões do Linux você pode encontrá-lo no menu de acessórios.
+Depois de iniciar um terminal, basta digitar `python` e pressionar a tecla Enter. Para iniciar o shell no Windows, basta ir ao menu Iniciar e escolher
+`Python (linha de comando)` no menu.
 
 
-Now that you have the shell started you may wonder what you can do with it?
-In the shell you can do anything you would do in a Python program.  Any of
-the examples you have seen in this chapter can be typed in directly to the
-shell.  Any Python expression can be entered into the shell and you will see
-the result printed out for you right underneath.  Here are some examples
-using the functions and expressions introduced in this chapter.
+Agora que você iniciou o Python shell, pode se perguntar o que pode fazer com ele.
+No shell, você pode fazer qualquer coisa que você faria em um programa Python. Qualquer dos exemplos que você viu neste capítulo podem ser digitados diretamente no shell.
+Qualquer expressão Python pode ser inserida no shell e você verá
+o resultado impresso para você logo abaixo. Aqui estão alguns exemplos
+usando as funções e expressões apresentadas neste capítulo.
+
 
 .. image:: Figures/shell_expressions.png
 
 
-Its a good idea to get in the habit of using the shell.  Very often if you
-have a question about how something works you can answer the question for
-yourself by simply trying it in the shell.  If you need a really extensable
-calculator you can simply start up your Python shell and use it to calculate
-just about anything.  Soon you'll find yourself writing little Python
-snippets for all kinds of things.
 
-Running a Python Program
-------------------------
+É uma boa idéia adquirir o hábito de usar o shell. Muitas vezes se você
+tiver uma dúvida sobre como algo funciona, você pode esclarecer sua dúvida para você mesmo, simplesmente experimentando no shell. Se você precisar de uma calculadora realmente poderosa, você pode simplesmente iniciar seu shell e usá-lo para calcular praticamente qualquer coisa. Em breve você se encontrará escrevendo pequenos programas em Python para resolver todos os tipos de coisas.
 
-Of course the problem with the Python shell is that you can't save anything,
-so you always have to retype whatever you want to do over again.  Its also
-difficult to do anything more than a few lines long because if you make a
-typo you end up retying everything.  Fortunately there is a solution for that
-as well.  Python alows you to write a program, and save it as a text file
-with the extension `.py` and then you can run that program right from the
-command line.
 
-Here is a simple example of a Python program.
+Executando um programa em Python
+---------------------------------
+
+Obviamente, o problema com o Python shell é que você não pode salvar nada,
+então você sempre precisará redigitar o que quiser fazer novamente. É também
+difícil fazer algo além de algumas linhas, porque se você fizer um erro de digitação, você acaba tendo de repetir tudo. Felizmente, existe uma solução para isso também. O Python permite que você escreva um programa e salve-o como um arquivo de texto com a extensão `.py` e, em seguida, você pode executar esse programa diretamente da linha de comando.
+
+Aqui está um exemplo simples de um programa Python.
 
 .. sourcecode::  python
 
     print('Hello World')
     print('2 + 3 = ', 2+3)
 
-Lets assume that you have typed in the lines above in Notepad or TextEdit or
-some similar editor, if you already know emacs or vi you are a awesome!  Now
-save the file as `testprog1.py` and then head back to the terminal.  Now at
-the command line of the terminal type `python testprog1.py` and you will see
-the following output
+
+Vamos supor que você digitou as linhas acima usando um editor como o Bloco de Notas ou TextEdit ou algum editor semelhante. Mas se você já conhece o emacs ou vi, então você é incrível! Agora salve o arquivo como `testprog1.py` e volte ao terminal. Agora digite `python testprog1.py` na linha de comando do terminal, e você verá a seguinte saída
 
 .. sourcecode:: python
 
@@ -90,48 +68,36 @@ the following output
     2 + 3 =  5
 
 
-Anything we do in the following chapters that appears in the editing window
-in the web page can be done exactly the same in the terminal just like the
-small example above.  This example illustrates one very important difference
-between entering expressions in the Python shell, and writing a Python
-program.  The Python shell uses what we call a read eval print loop.  That
-is, Python *reads* an expression from the command line,
-then *evaluates* that expression, and finally *prints* the result.  In a
-python program that you run using the Python interpreter,
-you have to be explicit about what it is you want to print.  That is why in
-the Python program we use the print function on both lines.
+Tudo o que fizermos nos próximos capítulos que apareça em janela de edição dentro do seu navegador,  pode ser feito exatamente da mesma forma no terminal (shell), assim como o pequeno exemplo acima. Este exemplo ilustra uma diferença muito importante entre inserir expressões no Python shell e escrever um programa em Python. O Python shell usa o que chamamos de *loop* de leitura-avaliação-impressão. Isto é, o Python **lê** uma expressão na linha de comando,
+então **avalia** essa expressão e, finalmente, **imprime** o resultado. Em um
+programa Python que você executa usando o interpretador Python,
+você precisa ser explícito sobre o que deseja imprimir. É por isso que em
+um programa Python usamos a função `print` nas duas linhas do arquivo.
 
 
-Installing Python on Windows
+Instalando Python no Windows
 ----------------------------
 
-If you are using windows you will need to install Python for yourself.  Here
-is a video that explains how to do it.
+Se você estiver usando Windows, precisará instalar o Python por conta própria. Esse é um vídeo que explica como fazê-lo.
 
 .. raw:: html
 
-    <iframe width="425" height="349" src="http://www.youtube.com/embed/9EfGpN1Pnsg"
-            frameborder="0" allowfullscreen></iframe>
+    <iframe width = "425" height = "349" src = "http://www.youtube.com/embed/9EfGpN1Pnsg"
+            frameborder = "0" allowfullscreen> </iframe>
 
-We are assuming that you use Python 3.x, as of this writing the latest
-version is Python 3.2.1.  This link will tell you how to update or install
-Python on Linux, Mac, or Windows. `Install Python <http://www.diveintopython3
-.org/installing-python.html>`_
+Estamos assumindo que você vai usar o Python 3.x. No momento em que escrevo esse texto, a versão mais atual é o Python 3.2.1. Este link mostra como atualizar ou instalar
+Python no Linux, Mac ou Windows. 
 
-Glossary
---------
+`Installing Python <https://diveintopython3.net/installing-python.html>`_
+
+
+Glossário
+---------
 
 .. glossary::
 
     terminal
-        A terminal is a program now days, but not too many years ago computer
-        scientists did their work at a hardware device called a terminal.
-        The terminal was connected by wire, or phone line to a computer
-        somewhere else.  Yes, the internet has not always been here.
+        Um terminal é um programa não muito popular hoje em dia, mas não há muitos anos atrás, os cientistas da computação faziam seu trabalho em um dispositivo de hardware chamado terminal. O terminal era conectado por cabo ou linha telefônica a um computador em algum outro lugar. Sim, a internet nem sempre esteve por aqui.
 
-    command line
-        The command line is often synonymous with terminal in that when you
-        are using the terminal you are also using the command line.  Its
-        where you type in commands, and then the computer interprets those
-        commands and responds to you with results.
-
+    linha de comando
+        O termo "linha de comando" geralmente é usado como sinônimo de terminal, pois quando você estiver usando o terminal, você também está usando a linha de comando. É o lugar onde você digita comandos e, em seguida, o computador interpreta os comandos e responde imprimindo os resultados.
