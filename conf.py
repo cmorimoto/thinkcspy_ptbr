@@ -157,8 +157,8 @@ inline_highlight_literals = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#html_theme = 'sphinx_bootstrap'
-html_theme = 'default'
+html_theme = 'sphinx_bootstrap'
+#html_theme = 'default'
 
 #html_style = "panda.css"
 
@@ -168,16 +168,16 @@ html_theme = 'default'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "PensePython",
+    #'navbar_title': "PensePython",
     # 'navbar_title': project,
 
     # Tab name for entire site. (Default: "Site")
     # 'navbar_site_name': "Chapters",
-    'navbar_site_name': "Capítulos",
+    #'navbar_site_name': "Capítulos",
 
     # Global TOC depth for "site" navbar tab. (Default: 1)
     # Switching to -1 shows all levels.
-    'globaltoc_depth': 1,
+    #'globaltoc_depth': 1,
 
     # Include hidden TOCs in Site navbar?
     #
@@ -186,19 +186,19 @@ html_theme_options = {
     # will break.
     #
     # Values: "true" (default) or "false"
-    'globaltoc_includehidden': "true",
+    #'globaltoc_includehidden': "true",
 
     # HTML navbar class (Default: "navbar") to attach to <div> element.
     # For black navbar, do "navbar navbar-inverse"
-    'navbar_class': "navbar",
+    #'navbar_class': "navbar",
 
     # Fix navigation bar to top of page?
     # Values: "true" (default) or "false"
-    'navbar_fixed_top': "true",
+    #'navbar_fixed_top': "true",
 
     # Location of link to source.
     # Options are "nav" (default), "footer" or anything else to exclude.
-    'source_link_position': "nav",
+    #'source_link_position': "nav",
 
     # Bootswatch (http://bootswatch.com/) theme.
     #
